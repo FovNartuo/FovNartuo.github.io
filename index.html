@@ -363,8 +363,7 @@
 
       
         
-          
-            <p><strong>let 和 const 是ES6中新增用来定义变量的。</strong></p>
+          <p><strong>let 和 const 是ES6中新增用来定义变量的。</strong></p>
 <h3 id="var"><a href="#var" class="headerlink" title="var"></a>var</h3><p>var语句用来声明JavaScript变量，在学习JS入门最基础了解的知识，也就是在ES5阶段，所有变量的声明都是用var。</p>
 <pre><code>var a=1;
 alert(a);
@@ -430,8 +429,13 @@ const a=1;
 const a=2;  //报错
 </code></pre><p><strong>const用途</strong></p>
 <p>为了防止意外修改变量，比如引入库名，组件名。</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/FovNartuo.github.io/2018/12/10/var，let，const区别/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -552,12 +556,16 @@ const a=2;  //报错
 
       
         
-          
-            <p><strong>ES6新增了字符串模块，用来简化之前繁杂的字符串连接。</strong><br>先看一下ES5时期字符串连接的用法，举个列子<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">"实践证明，“改革开放是决定当代中国命运的关键一招，也是决定实现‘两个一百年’奋斗目标、实现中华民族伟大复兴的关键一招。”未来，改革开放更需不断深化，在党的领导下，新时代的改革开放，必将为当代中国发展塑造新的格局、开辟新的境界。"</span>;</span><br><span class="line"><span class="built_in">document</span>.write(str);</span><br></pre></td></tr></table></figure></p>
+          <p><strong>ES6新增了字符串模块，用来简化之前繁杂的字符串连接。</strong><br>先看一下ES5时期字符串连接的用法，举个列子<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">"实践证明，“改革开放是决定当代中国命运的关键一招，也是决定实现‘两个一百年’奋斗目标、实现中华民族伟大复兴的关键一招。”未来，改革开放更需不断深化，在党的领导下，新时代的改革开放，必将为当代中国发展塑造新的格局、开辟新的境界。"</span>;</span><br><span class="line"><span class="built_in">document</span>.write(str);</span><br></pre></td></tr></table></figure></p>
 <p>引用的这段话中出现了很多个 “中国” 字样，我们需要将这个字符串单独拿出来，可方便修改，譬如修改成“中华”。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str1=<span class="string">"中国"</span>;</span><br><span class="line"><span class="keyword">var</span> str=<span class="string">"实践证明，“改革开放是决定当代"</span>+str1+<span class="string">"命运的关键一招，也是决定实现‘两个一百年’奋斗目标、实现中华民族伟大复兴的关键一招。”未来，改革开放更需不断深化，在党的领导下，新时代的改革开放，必将为当代"</span>+str1+<span class="string">"发展塑造新的格局、开辟新的境界。"</span>;</span><br><span class="line"><span class="built_in">document</span>.write(str);</span><br></pre></td></tr></table></figure></p>
 <p>ES6中新增了字符串模块，用反引号包含内容区，使用 ${变量} 来直接替换。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str1=<span class="string">"中国"</span>;</span><br><span class="line"><span class="keyword">var</span> str=<span class="string">`实践证明，“改革开放是决定当代<span class="subst">$&#123;str1&#125;</span>命运的关键一招，也是决定实现‘两个一百年’奋斗目标、实现中华民族伟大复兴的关键一招。”未来，改革开放更需不断深化，在党的领导下，新时代的改革开放，必将为当代<span class="subst">$&#123;str1&#125;</span>发展塑造新的格局、开辟新的境界。`</span>;</span><br><span class="line"><span class="built_in">document</span>.write(str);</span><br></pre></td></tr></table></figure></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/FovNartuo.github.io/2018/12/09/ES6字符串模板/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

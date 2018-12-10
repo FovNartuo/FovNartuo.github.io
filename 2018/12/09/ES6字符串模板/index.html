@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="前端，ES6,">
+  <meta name="keywords" content="ES6,">
 
 
 
@@ -106,14 +106,14 @@
 
 
 <meta name="description" content="ES6新增了字符串模块，用来简化之前繁杂的字符串连接。先看一下ES5时期字符串连接的用法，举个列子12var str=&quot;实践证明，“改革开放是决定当代中国命运的关键一招，也是决定实现‘两个一百年’奋斗目标、实现中华民族伟大复兴的关键一招。”未来，改革开放更需不断深化，在党的领导下，新时代的改革开放，必将为当代中国发展塑造新的格局、开辟新的境界。&quot;;document.write(str); 引用的这">
-<meta name="keywords" content="前端，ES6">
+<meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6字符串模板">
 <meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/09/ES6字符串模板/index.html">
 <meta property="og:site_name" content="左文东博客">
 <meta property="og:description" content="ES6新增了字符串模块，用来简化之前繁杂的字符串连接。先看一下ES5时期字符串连接的用法，举个列子12var str=&quot;实践证明，“改革开放是决定当代中国命运的关键一招，也是决定实现‘两个一百年’奋斗目标、实现中华民族伟大复兴的关键一招。”未来，改革开放更需不断深化，在党的领导下，新时代的改革开放，必将为当代中国发展塑造新的格局、开辟新的境界。&quot;;document.write(str); 引用的这">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-09T12:15:00.591Z">
+<meta property="og:updated_time" content="2018-12-10T12:52:50.671Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6字符串模板">
 <meta name="twitter:description" content="ES6新增了字符串模块，用来简化之前繁杂的字符串连接。先看一下ES5时期字符串连接的用法，举个列子12var str=&quot;实践证明，“改革开放是决定当代中国命运的关键一招，也是决定实现‘两个一百年’奋斗目标、实现中华民族伟大复兴的关键一招。”未来，改革开放更需不断深化，在党的领导下，新时代的改革开放，必将为当代中国发展塑造新的格局、开辟新的境界。&quot;;document.write(str); 引用的这">
@@ -363,7 +363,7 @@
         <p><strong>ES6新增了字符串模块，用来简化之前繁杂的字符串连接。</strong><br>先看一下ES5时期字符串连接的用法，举个列子<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">"实践证明，“改革开放是决定当代中国命运的关键一招，也是决定实现‘两个一百年’奋斗目标、实现中华民族伟大复兴的关键一招。”未来，改革开放更需不断深化，在党的领导下，新时代的改革开放，必将为当代中国发展塑造新的格局、开辟新的境界。"</span>;</span><br><span class="line"><span class="built_in">document</span>.write(str);</span><br></pre></td></tr></table></figure></p>
 <p>引用的这段话中出现了很多个 “中国” 字样，我们需要将这个字符串单独拿出来，可方便修改，譬如修改成“中华”。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str1=<span class="string">"中国"</span>;</span><br><span class="line"><span class="keyword">var</span> str=<span class="string">"实践证明，“改革开放是决定当代"</span>+str1+<span class="string">"命运的关键一招，也是决定实现‘两个一百年’奋斗目标、实现中华民族伟大复兴的关键一招。”未来，改革开放更需不断深化，在党的领导下，新时代的改革开放，必将为当代"</span>+str1+<span class="string">"发展塑造新的格局、开辟新的境界。"</span>;</span><br><span class="line"><span class="built_in">document</span>.write(str);</span><br></pre></td></tr></table></figure></p>
 <p>ES6中新增了字符串模块，用反引号包含内容区，使用 ${变量} 来直接替换。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str1=<span class="string">"中国"</span>;</span><br><span class="line"><span class="keyword">var</span> str=<span class="string">`实践证明，“改革开放是决定当代<span class="subst">$&#123;str1&#125;</span>命运的关键一招，也是决定实现‘两个一百年’奋斗目标、实现中华民族伟大复兴的关键一招。”未来，改革开放更需不断深化，在党的领导下，新时代的改革开放，必将为当代<span class="subst">$&#123;str1&#125;</span>发展塑造新的格局、开辟新的境界。`</span>;</span><br><span class="line"><span class="built_in">document</span>.write(str);</span><br></pre></td></tr></table></figure></p>
-
+<a id="more"></a>
       
     </div>
     
@@ -390,7 +390,7 @@
       
         <div class="post-tags">
           
-            <a href="/FovNartuo.github.io/tags/前端，ES6/" rel="tag"># 前端，ES6</a>
+            <a href="/FovNartuo.github.io/tags/ES6/" rel="tag"># ES6</a>
           
         </div>
       
