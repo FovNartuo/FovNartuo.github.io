@@ -105,18 +105,18 @@
 
 
 
-<meta name="description" content="ES6之前想要赋值数组，首先想到的是： var oArr=[1,2,3]; newArr=oArr; newArr.pop(); console.log(oArr,newArr); 直接赋值原来的数组，然而这只是引用辅助，在删除新数组最后一个元素时也会影响到原本的数组，那么想要复制一个不会相互干扰的数组的话，有以下几种方法。 采用循环的办法var oArr=[1,2,3]; var newArr=">
+<meta name="description" content="赋值数组就是将一个已知的数组赋值到一个新数组中。">
 <meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="赋值数组">
 <meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/11/赋值数组/index.html">
 <meta property="og:site_name" content="左文东博客">
-<meta property="og:description" content="ES6之前想要赋值数组，首先想到的是： var oArr=[1,2,3]; newArr=oArr; newArr.pop(); console.log(oArr,newArr); 直接赋值原来的数组，然而这只是引用辅助，在删除新数组最后一个元素时也会影响到原本的数组，那么想要复制一个不会相互干扰的数组的话，有以下几种方法。 采用循环的办法var oArr=[1,2,3]; var newArr=">
+<meta property="og:description" content="赋值数组就是将一个已知的数组赋值到一个新数组中。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-11T15:00:40.539Z">
+<meta property="og:updated_time" content="2018-12-11T15:20:04.209Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="赋值数组">
-<meta name="twitter:description" content="ES6之前想要赋值数组，首先想到的是： var oArr=[1,2,3]; newArr=oArr; newArr.pop(); console.log(oArr,newArr); 直接赋值原来的数组，然而这只是引用辅助，在删除新数组最后一个元素时也会影响到原本的数组，那么想要复制一个不会相互干扰的数组的话，有以下几种方法。 采用循环的办法var oArr=[1,2,3]; var newArr=">
+<meta name="twitter:description" content="赋值数组就是将一个已知的数组赋值到一个新数组中。">
 
 
 
@@ -360,7 +360,9 @@
       
 
       
-        <p>ES6之前想要<strong>赋值数组</strong>，首先想到的是：</p>
+        <p>赋值数组就是将一个已知的数组赋值到一个新数组中。</p>
+<a id="more"></a>
+<p>ES6之前想要<strong>赋值数组</strong>，首先想到的是：</p>
 <pre><code>var oArr=[1,2,3];
 newArr=oArr;
 newArr.pop();
@@ -381,7 +383,7 @@ console.log(oArr,newArr);
 var newArr=[...oArr];
 newArr.pop();
 console.log(oArr,newArr);
-</code></pre><p>亲测，只能是三个点，代表复制目标数组。<br><a id="more"></a></p>
+</code></pre><p>亲测，只能是三个点，代表复制目标数组。<br><!-- more --></p>
 
       
     </div>
