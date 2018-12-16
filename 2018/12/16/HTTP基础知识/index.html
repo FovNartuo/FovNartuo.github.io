@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="ES6,">
+  <meta name="keywords" content="计算机基础,">
 
 
 
@@ -105,18 +105,21 @@
 
 
 
-<meta name="description" content="JavaScript中使用一个函数，以下两种方法均是常用的。">
-<meta name="keywords" content="ES6">
+<meta name="description" content="前言在学习node.js时，网址解析这部分内容涉及到HTTP知识。通信协议HTTP，全称HyperText Transfer Protocol。在了解这块知识之前得先理解URL和URI。 URL和URI URL：Uniform Resource Identifier   统一资源标志符 URI ：Universal Resouce Locator   统一资源定位符">
+<meta name="keywords" content="计算机基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="箭头函数">
-<meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/12/箭头函数/index.html">
+<meta property="og:title" content="HTTP基础知识">
+<meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/16/HTTP基础知识/index.html">
 <meta property="og:site_name" content="左文东博客">
-<meta property="og:description" content="JavaScript中使用一个函数，以下两种方法均是常用的。">
+<meta property="og:description" content="前言在学习node.js时，网址解析这部分内容涉及到HTTP知识。通信协议HTTP，全称HyperText Transfer Protocol。在了解这块知识之前得先理解URL和URI。 URL和URI URL：Uniform Resource Identifier   统一资源标志符 URI ：Universal Resouce Locator   统一资源定位符">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-12T12:11:58.616Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181216215907364.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181216220325162.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2018-12-16T14:06:26.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="箭头函数">
-<meta name="twitter:description" content="JavaScript中使用一个函数，以下两种方法均是常用的。">
+<meta name="twitter:title" content="HTTP基础知识">
+<meta name="twitter:description" content="前言在学习node.js时，网址解析这部分内容涉及到HTTP知识。通信协议HTTP，全称HyperText Transfer Protocol。在了解这块知识之前得先理解URL和URI。 URL和URI URL：Uniform Resource Identifier   统一资源标志符 URI ：Universal Resouce Locator   统一资源定位符">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20181216215907364.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70">
 
 
 
@@ -146,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/12/箭头函数/">
+  <link rel="canonical" href="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/16/HTTP基础知识/">
 
 
 
 
 
-  <title>箭头函数 | 左文东博客</title>
+  <title>HTTP基础知识 | 左文东博客</title>
   
 
 
@@ -293,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2018/12/12/箭头函数/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2018/12/16/HTTP基础知识/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="bertZuo">
@@ -310,7 +313,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">箭头函数</h1>
+          <h1 class="post-title" itemprop="name headline">HTTP基础知识</h1>
         
 
         <div class="post-meta">
@@ -322,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-12T20:08:01+08:00">
-                2018-12-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-16T22:04:46+08:00">
+                2018-12-16
               </time>
             
 
@@ -360,76 +363,82 @@
       
 
       
-        <p>JavaScript中使用一个函数，以下两种方法均是常用的。</p>
+        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>在学习node.js时，网址解析这部分内容涉及到HTTP知识。通信协议HTTP，全称HyperText Transfer Protocol。在了解这块知识之前得先理解URL和URI。</p>
+<h4 id="URL和URI"><a href="#URL和URI" class="headerlink" title="URL和URI"></a>URL和URI</h4><ol>
+<li>URL：Uniform Resource Identifier   统一资源标志符</li>
+<li>URI ：Universal Resouce Locator   统一资源定位符</li>
+</ol>
 <a id="more"></a>
-<p>一：</p>
-<pre><code>function show(){
-    alert(&quot;无参函数&quot;);
-}
-show();
-</code></pre><p>二：</p>
-<pre><code>function show(a,b){
-    return a+b;
-}
-console.log(show(1,2));
-</code></pre><p>ES6中新增了箭头函数，为了是代码更简洁，举个栗子，实现点击方块改变颜色的效果，ES5代码如下：</p>
-<pre><code>&lt;div id=&quot;box&quot; style=&quot;width: 90px;height: 90px;background:#ccc;&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-    var oBox=document.getElementById(&quot;box&quot;);
-    oBox.onclick=function(){
-        this.style.background=&quot;red&quot;;
-    }
-&lt;/script&gt;
-</code></pre><h4 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h4><pre><code>&lt;div id=&quot;box&quot; style=&quot;width: 90px;height: 90px;background:#ccc;&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-    var oBox=document.getElementById(&quot;box&quot;);
-    oBox.onclick=()=&gt;{
-        oBox.style.background=&quot;red&quot;;
-    }
-&lt;/script&gt;
-</code></pre><p>可见，箭头函数是替换了原来的function()，改变为()=&gt;。而且不难发现，除此之外还有一个变化，this变成了oBox。</p>
-<p>因为试验中发现使用this会报错，这是为何，那就涉及到箭头函数需要注意到问题了。</p>
-<h4 id="this问题"><a href="#this问题" class="headerlink" title="this问题"></a>this问题</h4><p>在原有的例子上，在点击事件中增加一个测试语句，我们来看一下this到底指向了哪里。</p>
-<pre><code>&lt;div id=&quot;box&quot; style=&quot;width: 90px;height: 90px;background:#ccc;&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-    var oBox=document.getElementById(&quot;box&quot;);
-    oBox.onclick=()=&gt;{
-        alert(this);                //[object Window]
-        oBox.style.background=&quot;red&quot;;
-    }
-&lt;/script&gt;
-</code></pre><p>可见，this改变了作用域，指向了window。</p>
-<p>那么在json中又会怎么样，先看一下原本的函数：</p>
-<pre><code>var json={
-    a:1,
-    b:2,
-    show:function(){
-        alert(this.a);
-    }
-};
-json.show();    //返回 1
-</code></pre><p> 而箭头函数：</p>
-<pre><code>var a=2018;
-var json={
-    a:1,
-    b:2,
-    show:()=&gt;{
-        alert(this.a);
-    }
-};
-json.show();    //返回2018
-</code></pre><p>返回结果2018，是定义在全局变量的a，这又证实了this指向的是window </p>
-<h4 id="arguments问题"><a href="#arguments问题" class="headerlink" title="arguments问题"></a>arguments问题</h4><p>函数中arguments是当前函数的一个内置属性。arguments非常类似Array，但实际上又不是一个Array实例，它的长度由实参长度决定。</p>
-<pre><code>function show(){
-    console.log(arguments);    //返回1,2,3,4
-}
-show(1,2,3,4);
-</code></pre><p>而对于箭头函数呢，arguments是不能使用的。</p>
-<pre><code>var show=()=&gt;{
-    console.log(arguments); //报错 arguments is not defined
-}
-show(1,2,3,4);
-</code></pre>
+<p>譬如，</p>
+<pre><code>http://imooc.com:8080/course/list?from-scott&amp;course-node#floor1
+</code></pre><p>这样复杂的一个地址都包含了什么部分？</p>
+<ol>
+<li>protocol    底层使用的协议，http:</li>
+<li>slashes    协议的双斜线，//</li>
+<li>auth    null</li>
+<li>host</li>
+<li>域名/IP地址，imooc.com:8080</li>
+<li>port    端口，8080</li>
+<li>hostname    主机名，imooc.com</li>
+<li>hash    哈希值，对应页面某个锚点，#floor1</li>
+<li>search    查询字符串参数，?from-scott&amp;course-node</li>
+<li>query    发送给http服务器的数据，from-scott&amp;course-node</li>
+<li>pathname    访问资源的路径名，/course/list</li>
+<li>path    路径，/course/list?from-scott&amp;course-node</li>
+<li>href    未被解析的完整url</li>
+</ol>
+<p>以上是nodejs中url.parse解析一个url所得到的结果，下面主要来了解一下HTTP的相关知识。</p>
+<h4 id="URL和URI的关系"><a href="#URL和URI的关系" class="headerlink" title="URL和URI的关系"></a>URL和URI的关系</h4><p><img src="https://img-blog.csdnimg.cn/20181216215907364.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h4 id="HHTP和HTTPS区别"><a href="#HHTP和HTTPS区别" class="headerlink" title="HHTP和HTTPS区别"></a>HHTP和HTTPS区别</h4><p>HTTP协议用于从网络传输超文本数据到本地浏览器的传输协议，它可保证高效而准确的传送超文本文档。</p>
+<p>HTTPS（HyperText Transfer Protocol over Secure Socket Layer）以安全为目标的HTTP通道，HTTP中加入SSL层，是HTTP的安全版。</p>
+<p>HTTP请求过程</p>
+<ol>
+<li>http客户端发起请求，创建端口。</li>
+<li>http服务器在端口监听客户端的请求。</li>
+<li><p>http服务器向客户端返回状态和状态码<br><img src="https://img-blog.csdnimg.cn/20181216220325162.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>其中request包含四个部分：</p>
+</li>
+<li><p>Request Method  请求方法</p>
+</li>
+<li>Request URL</li>
+<li>Request Headers</li>
+<li>Request Body</li>
+</ol>
+<h4 id="Request-Method"><a href="#Request-Method" class="headerlink" title="Request Method"></a>Request Method</h4><p>GET请求：在浏览器中输入URL，变发起了GET<br>POST请求，大多在表单提交时发起</p>
+<h5 id="GET-和-POST-区别"><a href="#GET-和-POST-区别" class="headerlink" title="GET 和 POST 区别"></a>GET 和 POST 区别</h5><p>get请求中的参数含在URL中，显式可见。post请求的URL不包含这些数据，以表单数据形式提交的数据最多1024字节，而对此get请求是没有限制的。</p>
+<h5 id="其他的请求方式"><a href="#其他的请求方式" class="headerlink" title="其他的请求方式"></a>其他的请求方式</h5><ol>
+<li>HEAD，类似GET，返回的响应中没有具体内容，用于获取报头。</li>
+<li>PUT，从客户端向服务器传送的数据取代指定文档中的内容。</li>
+<li>DELETE，请求服务器删除指定的页面。</li>
+<li>CONNECT，把服务器当跳板，让服务器替代客户端访问其他页面。</li>
+<li>OPTIONS，允许客户端查看服务器的性能。</li>
+<li>TRACE，回显服务器收到的请求，主要用于测试/诊断。</li>
+</ol>
+<h4 id="Request-URL"><a href="#Request-URL" class="headerlink" title="Request URL"></a>Request URL</h4><p>统一资源定位符，唯一确定想要请求的资源。</p>
+<h4 id="Request-Headers"><a href="#Request-Headers" class="headerlink" title="Request Headers"></a>Request Headers</h4><p>请求头，用来说明服务器要使用的附加信息。</p>
+<h4 id="常用的头形象"><a href="#常用的头形象" class="headerlink" title="常用的头形象"></a>常用的头形象</h4><ol>
+<li>Accept，请求报头域    用于指定客户端可接受哪些类型信息</li>
+<li>Accept-Language     指定客户端可接受的语言类型</li>
+<li>Accept-Encoding    指定客户端可接受的内容编码</li>
+<li>Host    用于指定请求资源的主机IP和端口号，其内容为请求 URL的原始服务器或网关的位置</li>
+<li>Cookies    网站为辨别用户进行会话跟踪而存储在用户本地的数据，主要功能：维护当前访问会话</li>
+<li>Deferer    用来标识这个请求是从哪个页面发出来的，服务器获取这一信息并作出相应处理</li>
+<li>User_Agent    让服务器识别客户端使用的操作系统及其版本，浏览器及其版本</li>
+<li>Content_type    互联网媒体类型</li>
+</ol>
+<h4 id="Request-Body"><a href="#Request-Body" class="headerlink" title="Request Body"></a>Request Body</h4><p>请求体中承载的内容是POST请求中的表单数据。对于GET请求，请求体为空。</p>
+<h4 id="Response-响应"><a href="#Response-响应" class="headerlink" title="Response 响应"></a>Response 响应</h4><ol>
+<li>Response Status Code 响应状态码，即服务器响应状态</li>
+<li>Response Header  包含了服务器对请求的应答信息</li>
+<li>Response Body</li>
+</ol>
+<h4 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h4><ul>
+<li>1xx     请求已接收，正在处理</li>
+<li>2xx    请求已接收，处理完成。譬如200，表示OK</li>
+<li>3xx    完成该请求预计更近一步的操作</li>
+<li>4xx    客户端错误，可能请求有语法错误。400：客户端语法错误，401：请求未被授权，403：请求被拒绝，404：资源没找到</li>
+<li>5xx    服务器端错误。500：服务器发生不可预计的错误，503：服务器当前无法处理请求</li>
+</ul>
+
       
     </div>
     
@@ -456,7 +465,7 @@ show(1,2,3,4);
       
         <div class="post-tags">
           
-            <a href="/FovNartuo.github.io/tags/ES6/" rel="tag"># ES6</a>
+            <a href="/FovNartuo.github.io/tags/计算机基础/" rel="tag"># 计算机基础</a>
           
         </div>
       
@@ -469,8 +478,8 @@ show(1,2,3,4);
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/FovNartuo.github.io/2018/12/11/for-of-循环和Map对象/" rel="next" title="for...of...循环和Map对象">
-                <i class="fa fa-chevron-left"></i> for...of...循环和Map对象
+              <a href="/FovNartuo.github.io/2018/12/14/二进制-了解计算机的源头/" rel="next" title="二进制-了解计算机的源头">
+                <i class="fa fa-chevron-left"></i> 二进制-了解计算机的源头
               </a>
             
           </div>
@@ -478,10 +487,6 @@ show(1,2,3,4);
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/FovNartuo.github.io/2018/12/12/jQuery选择器/" rel="prev" title="jQuery选择器">
-                jQuery选择器 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -638,7 +643,7 @@ show(1,2,3,4);
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#箭头函数"><span class="nav-number">1.</span> <span class="nav-text">箭头函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#this问题"><span class="nav-number">2.</span> <span class="nav-text">this问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#arguments问题"><span class="nav-number">3.</span> <span class="nav-text">arguments问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URL和URI"><span class="nav-number">2.</span> <span class="nav-text">URL和URI</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URL和URI的关系"><span class="nav-number">3.</span> <span class="nav-text">URL和URI的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HHTP和HTTPS区别"><span class="nav-number">4.</span> <span class="nav-text">HHTP和HTTPS区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Request-Method"><span class="nav-number">5.</span> <span class="nav-text">Request Method</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#GET-和-POST-区别"><span class="nav-number">5.1.</span> <span class="nav-text">GET 和 POST 区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他的请求方式"><span class="nav-number">5.2.</span> <span class="nav-text">其他的请求方式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Request-URL"><span class="nav-number">6.</span> <span class="nav-text">Request URL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Request-Headers"><span class="nav-number">7.</span> <span class="nav-text">Request Headers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的头形象"><span class="nav-number">8.</span> <span class="nav-text">常用的头形象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Request-Body"><span class="nav-number">9.</span> <span class="nav-text">Request Body</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Response-响应"><span class="nav-number">10.</span> <span class="nav-text">Response 响应</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#状态码"><span class="nav-number">11.</span> <span class="nav-text">状态码</span></a></li></ol></div>
             
 
           </div>

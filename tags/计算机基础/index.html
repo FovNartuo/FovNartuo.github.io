@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="ES6,">
+  <meta name="keywords" content="博客,JavaScript,前端开发,HTML,CSS">
 
 
 
@@ -105,18 +105,17 @@
 
 
 
-<meta name="description" content="JavaScript中使用一个函数，以下两种方法均是常用的。">
-<meta name="keywords" content="ES6">
-<meta property="og:type" content="article">
-<meta property="og:title" content="箭头函数">
-<meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/12/箭头函数/index.html">
+<meta name="description" content="The harder you work, the more progress you make.">
+<meta name="keywords" content="web,html,css,javascript">
+<meta property="og:type" content="website">
+<meta property="og:title" content="左文东博客">
+<meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/tags/计算机基础/index.html">
 <meta property="og:site_name" content="左文东博客">
-<meta property="og:description" content="JavaScript中使用一个函数，以下两种方法均是常用的。">
+<meta property="og:description" content="The harder you work, the more progress you make.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-12T12:11:58.616Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="箭头函数">
-<meta name="twitter:description" content="JavaScript中使用一个函数，以下两种方法均是常用的。">
+<meta name="twitter:title" content="左文东博客">
+<meta name="twitter:description" content="The harder you work, the more progress you make.">
 
 
 
@@ -146,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/12/箭头函数/">
+  <link rel="canonical" href="https://github.com/FovNartuo/FovNartuo.github.io/tags/计算机基础/">
 
 
 
 
 
-  <title>箭头函数 | 左文东博客</title>
+  <title>标签: 计算机基础 | 左文东博客</title>
   
 
 
@@ -171,7 +170,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband">
 		<a href="https://fovnartuo.github.io" class="github-corner" aria-label="View source on GitHub">
 			<svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
@@ -279,229 +278,52 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>计算机基础<small>标签</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2018/12/12/箭头函数/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="bertZuo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/FovNartuo.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="左文东博客">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">箭头函数</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/FovNartuo.github.io/2018/12/16/HTTP基础知识/" itemprop="url">
               
-                <span class="post-meta-item-text">发表于</span>
+                <span itemprop="name">HTTP基础知识</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-12T20:08:01+08:00">
-                2018-12-12
-              </time>
-            
+            </a>
+        
+      </h2>
 
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2018-12-16T22:04:46+08:00" content="2018-12-16">
+          12-16
+        </time>
+      </div>
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>JavaScript中使用一个函数，以下两种方法均是常用的。</p>
-<a id="more"></a>
-<p>一：</p>
-<pre><code>function show(){
-    alert(&quot;无参函数&quot;);
-}
-show();
-</code></pre><p>二：</p>
-<pre><code>function show(a,b){
-    return a+b;
-}
-console.log(show(1,2));
-</code></pre><p>ES6中新增了箭头函数，为了是代码更简洁，举个栗子，实现点击方块改变颜色的效果，ES5代码如下：</p>
-<pre><code>&lt;div id=&quot;box&quot; style=&quot;width: 90px;height: 90px;background:#ccc;&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-    var oBox=document.getElementById(&quot;box&quot;);
-    oBox.onclick=function(){
-        this.style.background=&quot;red&quot;;
-    }
-&lt;/script&gt;
-</code></pre><h4 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h4><pre><code>&lt;div id=&quot;box&quot; style=&quot;width: 90px;height: 90px;background:#ccc;&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-    var oBox=document.getElementById(&quot;box&quot;);
-    oBox.onclick=()=&gt;{
-        oBox.style.background=&quot;red&quot;;
-    }
-&lt;/script&gt;
-</code></pre><p>可见，箭头函数是替换了原来的function()，改变为()=&gt;。而且不难发现，除此之外还有一个变化，this变成了oBox。</p>
-<p>因为试验中发现使用this会报错，这是为何，那就涉及到箭头函数需要注意到问题了。</p>
-<h4 id="this问题"><a href="#this问题" class="headerlink" title="this问题"></a>this问题</h4><p>在原有的例子上，在点击事件中增加一个测试语句，我们来看一下this到底指向了哪里。</p>
-<pre><code>&lt;div id=&quot;box&quot; style=&quot;width: 90px;height: 90px;background:#ccc;&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-    var oBox=document.getElementById(&quot;box&quot;);
-    oBox.onclick=()=&gt;{
-        alert(this);                //[object Window]
-        oBox.style.background=&quot;red&quot;;
-    }
-&lt;/script&gt;
-</code></pre><p>可见，this改变了作用域，指向了window。</p>
-<p>那么在json中又会怎么样，先看一下原本的函数：</p>
-<pre><code>var json={
-    a:1,
-    b:2,
-    show:function(){
-        alert(this.a);
-    }
-};
-json.show();    //返回 1
-</code></pre><p> 而箭头函数：</p>
-<pre><code>var a=2018;
-var json={
-    a:1,
-    b:2,
-    show:()=&gt;{
-        alert(this.a);
-    }
-};
-json.show();    //返回2018
-</code></pre><p>返回结果2018，是定义在全局变量的a，这又证实了this指向的是window </p>
-<h4 id="arguments问题"><a href="#arguments问题" class="headerlink" title="arguments问题"></a>arguments问题</h4><p>函数中arguments是当前函数的一个内置属性。arguments非常类似Array，但实际上又不是一个Array实例，它的长度由实参长度决定。</p>
-<pre><code>function show(){
-    console.log(arguments);    //返回1,2,3,4
-}
-show(1,2,3,4);
-</code></pre><p>而对于箭头函数呢，arguments是不能使用的。</p>
-<pre><code>var show=()=&gt;{
-    console.log(arguments); //报错 arguments is not defined
-}
-show(1,2,3,4);
-</code></pre>
-      
-    </div>
-    
-    
-    
-	
-	<div>
-	  
-		<div>
-    
-        <div style="text-align:center;color: #ccc;font-size:16px;">-------------END-------------</div>
-    
-</div>
-	  
-	</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/FovNartuo.github.io/tags/ES6/" rel="tag"># ES6</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/FovNartuo.github.io/2018/12/11/for-of-循环和Map对象/" rel="next" title="for...of...循环和Map对象">
-                <i class="fa fa-chevron-left"></i> for...of...循环和Map对象
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/FovNartuo.github.io/2018/12/12/jQuery选择器/" rel="prev" title="jQuery选择器">
-                jQuery选择器 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -509,10 +331,6 @@ show(1,2,3,4);
 
 
           
-
-  
-
-
 
         </div>
         
@@ -533,17 +351,8 @@ show(1,2,3,4);
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            OverView
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -628,22 +437,6 @@ show(1,2,3,4);
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#箭头函数"><span class="nav-number">1.</span> <span class="nav-text">箭头函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#this问题"><span class="nav-number">2.</span> <span class="nav-text">this问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#arguments问题"><span class="nav-number">3.</span> <span class="nav-text">arguments问题</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -802,10 +595,6 @@ show(1,2,3,4);
 
 
   
-  <script type="text/javascript" src="/FovNartuo.github.io/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/FovNartuo.github.io/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
