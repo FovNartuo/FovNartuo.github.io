@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/FovNartuo.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Comic Sans MS:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/FovNartuo.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/FovNartuo.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/FovNartuo.github.io/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/FovNartuo.github.io/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/FovNartuo.github.io/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/FovNartuo.github.io/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="jQuery,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="jQuery提供了许多直接使用的方法。 1、addClass()方法通过动态改变类名（class），可以让其修改元素呈现出不同的效果。在HTML结构中里，多个class以空格分隔，当一个节点（或称为一个标签）含有多个class时，DOM元素响应的className属性获取的不是class名称的数组，而是一个含有空格的字符串，这就使得多class操作变得很麻烦。而jQuery中.addClass(c">
+<meta name="keywords" content="jQuery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery-方法">
+<meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/17/jQuery-方法/index.html">
+<meta property="og:site_name" content="左文东博客">
+<meta property="og:description" content="jQuery提供了许多直接使用的方法。 1、addClass()方法通过动态改变类名（class），可以让其修改元素呈现出不同的效果。在HTML结构中里，多个class以空格分隔，当一个节点（或称为一个标签）含有多个class时，DOM元素响应的className属性获取的不是class名称的数组，而是一个含有空格的字符串，这就使得多class操作变得很麻烦。而jQuery中.addClass(c">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181217202028348.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181217220356701.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181217220645159.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181217220834889.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181217221210419.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181217221232260.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181217221256665.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181217221327544.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181217221352908.png">
+<meta property="og:updated_time" content="2018-12-17T14:17:08.539Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery-方法">
+<meta name="twitter:description" content="jQuery提供了许多直接使用的方法。 1、addClass()方法通过动态改变类名（class），可以让其修改元素呈现出不同的效果。在HTML结构中里，多个class以空格分隔，当一个节点（或称为一个标签）含有多个class时，DOM元素响应的className属性获取的不是class名称的数组，而是一个含有空格的字符串，这就使得多class操作变得很麻烦。而jQuery中.addClass(c">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20181217202028348.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/FovNartuo.github.io/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/17/jQuery-方法/">
+
+
+
+
+
+  <title>jQuery-方法 | 左文东博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband">
+		<a href="https://fovnartuo.github.io" class="github-corner" aria-label="View source on GitHub">
+			<svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+				<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/>
+				<path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+				<path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+			</svg>
+		</a>
+		<style>
+			.github-corner:hover 
+			.octo-arm{animation:octocat-wave 560ms ease-in-out}
+			@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}
+			@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+		</style>
+	</div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/FovNartuo.github.io/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">左文东博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">记录技术与生活</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/FovNartuo.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/FovNartuo.github.io/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            目录
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/FovNartuo.github.io/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/FovNartuo.github.io/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2018/12/17/jQuery-方法/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="bertZuo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/FovNartuo.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左文东博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">jQuery-方法</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-17T22:16:09+08:00">
+                2018-12-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>jQuery提供了许多直接使用的方法。</strong></p>
+<h4 id="1、addClass-方法"><a href="#1、addClass-方法" class="headerlink" title="1、addClass()方法"></a>1、addClass()方法</h4><p>通过动态改变类名（class），可以让其修改元素呈现出不同的效果。在HTML结构中里，多个class以空格分隔，当一个节点（或称为一个标签）含有多个class时，DOM元素响应的className属性获取的不是class名称的数组，而是一个含有空格的字符串，这就使得多class操作变得很麻烦。而jQuery中.addClass(className)方法，用于动态增加class类名。</p>
+<ul>
+<li>.addClass( className ) : 为每个匹配元素所要增加的一个或多个样式名</li>
+<li>.addClass( function(index, currentClass) ) : 这个函数返回一个或更多用空格隔开要增加的样式名</li>
+<li>addClass()方法不会替换一个样式类名。它只是简单的添加一个样式类名到元素上</li>
+</ul>
+<a id="more"></a> 
+<p>下面创建一个例子，HTML和CSS部分不变，基于这个例子来展开各种JS方法的实现，</p>
+<pre><code>&lt;div id=&quot;box&quot;&gt;
+    &lt;div id=&quot;left&quot;&gt;
+        &lt;button class=&quot;btn_target&quot; id=&quot;target1&quot;&gt;#target1&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;right&quot;&gt;
+        &lt;button class=&quot;btn_target&quot; id=&quot;target2&quot;&gt;#target2&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+#box{
+    width: 150px;
+    height: 100px;
+}
+
+#left{
+    width: 70px;
+    height: 50px;
+    position: relative;
+}
+
+#target1{
+    margin-left: 3px;
+}
+
+#right{
+    position: absolute;
+    top: 8px;
+    left: 90px;
+}
+$(document).ready(function(){
+    $(&quot;button&quot;).addClass(&quot;animated shake&quot;);
+});
+</code></pre><p> “animated shake”效果需要引入了jQuery库和Animate.css库，</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; href=&quot;animate.min.css&quot; /&gt;
+&lt;script src=&quot;jquery-1.12.4.js&quot;&gt;&lt;/script&gt;
+</code></pre><h4 id="2、removeClass-方法"><a href="#2、removeClass-方法" class="headerlink" title="2、removeClass()方法"></a>2、removeClass()方法</h4><p>从匹配的元素中删除全部或者指定的class，</p>
+<p>（1）.removeClass( [className ] )：每个匹配元素移除的一个或多个用空格隔开的样式名</p>
+<p>（2）.removeClass( function(index, class) ) ： 一个函数，返回一个或多个将要被移除的样式名</p>
+<pre><code>$(document).ready(function(){
+    $(&quot;button&quot;).removeClass(&quot;btn_target&quot;);
+});
+</code></pre><p><img src="https://img-blog.csdnimg.cn/20181217202028348.png" alt="在这里插入图片描述"></p>
+<h4 id="3、切换样式-toggleClass"><a href="#3、切换样式-toggleClass" class="headerlink" title="3、切换样式.toggleClass()"></a>3、切换样式.toggleClass()</h4><p>在做某些效果的时候，可能会针对同一节点的某一个样式不断的切换，也就是addClass与removeClass的互斥切换，比如隔行换色效果。jQuery提供一个toggleClass方法用于简化这种互斥的逻辑，通过toggleClass方法动态添加删除Class，一次执行相当于addClass，再次执行相当于removeClass。</p>
+<ul>
+<li>.toggleClass(<br>)方法在匹配的元素集合中的每个元素上添加或删除一个或多个样式类,取决于这个样式类是否存在或值切换属性，即：如果存在（不存在）就删除（添加）一个类</li>
+<li>.toggleClass( className )：在匹配的元素集合中的每个元素上用来切换的一个或多个（用空格隔开）样式类名</li>
+<li>.toggleClass( className, switch )：一个布尔值，用于判断样式是否应该被添加或移除</li>
+<li>.toggleClass( [switch ] )：一个用来判断样式类添加还是移除的 布尔值</li>
+<li>.toggleClass( function(index, class, switch) [, switch ]<br> )：用来返回在匹配的元素集合中的每个元素上用来切换的样式类名的一个函数。接收元素的索引位置和元素旧的样式类作为参数</li>
+</ul>
+<p>toggleClass是一个互斥的逻辑，也就是通过判断对应的元素上是否存在指定的Class名，如果有就删除，如果没有就增加，toggleClass会保留原有的Class名后新增，通过空格隔开。</p>
+<h4 id="4、-css-方法"><a href="#4、-css-方法" class="headerlink" title="4、.css()方法"></a>4、.css()方法</h4><p>获取元素样式属性的计算值或者设置元素的CSS属性，</p>
+<p>获取：</p>
+<ul>
+<li>.css( propertyName ) ：获取匹配元素集合中的第一个元素的样式属性的计算值</li>
+<li>.css( propertyNames )：传递一组数组，返回一个对象结果 设置：</li>
+</ul>
+<p>.css(propertyName, value )：设置CSS</p>
+<ul>
+<li>.css( propertyName, function )：可以传入一个回调函数，返回取到对应的值进行处理</li>
+<li>.css( properties )：可以传一个对象，同时设置多个样式</li>
+</ul>
+<p><strong>注意事项：</strong></p>
+<p>（1）浏览器属性获取方式不同，在获取某些值的时候都jQuery采用统一的处理，比如颜色采用RBG，尺寸采用px<br>（2）.css()方法支持驼峰写法与大小写混搭的写法，内部做了容错的处理<br>（3）当一个数只被作为值（value）的时候， jQuery会将其转换为一个字符串，并添在字符串的结尾处添加px，例如 </p>
+<pre><code>.css(&quot;width&quot;,50}) 与 .css(&quot;width&quot;,&quot;50px&quot;})一样
+$(document).ready(function(){
+    $(&quot;#target1&quot;).css(&quot;color&quot;,&quot;red&quot;);
+});
+</code></pre><h4 id="5、-css-与-addClass-设置样式的区别"><a href="#5、-css-与-addClass-设置样式的区别" class="headerlink" title="5、.css()与.addClass()设置样式的区别"></a>5、.css()与.addClass()设置样式的区别</h4><h6 id="（1）可维护性"><a href="#（1）可维护性" class="headerlink" title="（1）可维护性"></a>（1）可维护性</h6><p>.addClass()的本质是通过定义个class类的样式规则，给元素添加一个或多个类。css方法是通过JavaScript大量代码进行改变元素的样式，</p>
+<p>通过.addClass()可以批量的给相同的元素设置统一规则，变动起来比较方便，可以统一修改删除。如果通过.css()方法就需要指定每一个元素是一一的修改，日后维护也要一一的修改，比较麻烦。</p>
+<h6 id="（2）灵活性"><a href="#（2）灵活性" class="headerlink" title="（2）灵活性"></a>（2）灵活性</h6><p>通过.css()方式可以很容易动态的去改变一个样式的属性，不需要在去繁琐的定义个class类的规则。一般来说在不确定开始布局规则，通过动态生成的HTML代码结构中，都是通过.css()方法处理的。</p>
+<h6 id="（3）样式值"><a href="#（3）样式值" class="headerlink" title="（3）样式值"></a>（3）样式值</h6><p>.addClass()本质只是针对class的类的增加删除，不能获取到指定样式的属性的值；</p>
+<p>.css()可以获取到指定的样式值。</p>
+<h6 id="（4）样式的优先级"><a href="#（4）样式的优先级" class="headerlink" title="（4）样式的优先级"></a>（4）样式的优先级</h6><p>css的样式是有优先级的，当外部样式、内部样式和内联样式同一样式规则同时应用于同一个元素的时候，优先级为：外部样式 &lt; 内部样式 &lt; 内联样式。</p>
+<p>.addClass()方法是通过增加class名的方式，那么这个样式是在外部文件或者内部样式中先定义好的，等到需要的时候在附加到元素上。</p>
+<p>通过.css()方法处理的是内联样式，直接通过元素的style属性附加到元素上的。</p>
+<p>因此，通过.css方法设置的样式属性优先级要高于.addClass方法</p>
+<h4 id="6、-prop-方法"><a href="#6、-prop-方法" class="headerlink" title="6、.prop()方法"></a>6、.prop()方法</h4><p>Property是将DOM元素作为对象，其附加的内容，例如tagName, nodeName, nodeType, defaultChecked, 和 defaultSelected …使用.prop()方法进行取值或赋值。</p>
+<pre><code>$(document).ready(function(){
+    $(&quot;button&quot;).prop(&quot;disabled&quot;,true);
+})
+</code></pre><p><img src="https://img-blog.csdnimg.cn/20181217220356701.png" alt="在这里插入图片描述"><br>“disabled”为真时，实现按钮不可用效果，按钮颜色变灰，无法点击。</p>
+<h4 id="7、-attr-方法"><a href="#7、-attr-方法" class="headerlink" title="7、.attr()方法"></a>7、.attr()方法</h4><p>jQuery中用.attr()方法来获取和设置元素属性,attr是attribute（属性）的缩写，</p>
+<p>attr()有4个表达式：</p>
+<ol>
+<li>attr(传入属性名)：获取属性的值</li>
+<li>attr(属性名, 属性值)：设置属性的值</li>
+<li>attr(属性名,函数值)：设置属性的函数值</li>
+<li>attr(attributes)：给指定元素设置多个属性值，即：{属性名一: “属性值一” , 属性名二: “属性值二” , … … }</li>
+</ol>
+<h4 id="8、attribute和property的区别"><a href="#8、attribute和property的区别" class="headerlink" title="8、attribute和property的区别"></a>8、attribute和property的区别</h4><ul>
+<li>property是DOM中的属性，是JavaScript里的对象；</li>
+<li>Property是将DOM元素作为对象，其附加的内容，例如childNodes、firstChild等；</li>
+<li>DOM有其默认的基本属性，而这些属性就是所谓的“property”，无论如何，它们都会在初始化的时候在DOM对象上创建；</li>
+<li>如果在标签对这些属性进行赋值，那么这些值就会作为初始值赋给DOM的同名property。</li>
+<li>attribute是HTML标签上的特性，它的值只能够是字符串；</li>
+<li>Attribute就是dom节点自带的属性，例如html中常用的id、class、title、align等；</li>
+<li>HTML标签中定义的属性和值会保存该DOM对象的attributes属性里面。</li>
+</ul>
+<h4 id="9、-removeAttr"><a href="#9、-removeAttr" class="headerlink" title="9、.removeAttr()"></a>9、.removeAttr()</h4><p>.removeAttr( attributeName ) 删除方法为匹配的元素集合中的每个元素中移除一个属性（attribute）。 </p>
+<h4 id="10、-html-方法"><a href="#10、-html-方法" class="headerlink" title="10、.html()方法"></a>10、.html()方法</h4><p>获取集合中第一个匹配元素的HTML内容 或 设置每一个匹配元素的html内容，具体有3种用法：</p>
+<ul>
+<li>.html() 不传入值，就是获取集合中第一个匹配元素的HTML内容</li>
+<li>.html( htmlString )  设置每一个匹配元素的html内容</li>
+<li>.html( function(index, oldhtml) ) 用来返回设置HTML内容的一个函数</li>
+</ul>
+<p>.html()方法内部使用的是DOM的innerHTML属性来处理的，所以在设置与获取上需要注意的一个最重要的问题，这个操作是针对整个HTML内容（不仅仅只是文本内容）。 </p>
+<pre><code>$(document).ready(function(){
+    $(&quot;#target1&quot;).html(&quot;&lt;em&gt;#target1&lt;/em&gt;&quot;);
+})
+</code></pre><p><img src="https://img-blog.csdnimg.cn/20181217220645159.png" alt="在这里插入图片描述"><br>所替换的文本含有标签，会显示出标签的作用。</p>
+<h4 id="11、-text-方法"><a href="#11、-text-方法" class="headerlink" title="11、.text()方法"></a>11、.text()方法</h4><p>得到匹配元素集合中每个元素的文本内容结合，包括他们的后代，或设置匹配元素集合中每个元素的文本内容为指定的文本内容，具体有3种用法：</p>
+<p>（1）.text() 得到匹配元素集合中每个元素的合并文本，包括他们的后代<br>（2）.text( textString ) 用于设置匹配元素内容的文本<br>（3）.text( function(index, text) ) 用来返回设置文本内容的一个函数</p>
+<pre><code>$(document).ready(function(){
+    $(&quot;#target1&quot;).text(&quot;&lt;em&gt;#targetOne&lt;/em&gt;&quot;);
+})
+</code></pre><p><img src="https://img-blog.csdnimg.cn/20181217220834889.png" alt="在这里插入图片描述"></p>
+<h4 id="12、-html与-text的异同"><a href="#12、-html与-text的异同" class="headerlink" title="12、.html与.text的异同"></a>12、.html与.text的异同</h4><ol>
+<li>.html与.text的方法操作是一样，只是在具体针对处理对象不同</li>
+<li>.html处理的是元素内容，而.text处理的是文本内容</li>
+<li>.html只能使用在HTML文档中，而.text 在XML 和 HTML 文档中都能使用</li>
+<li>如果处理的对象只有一个子文本节点，那么html处理的结果与text是一样的</li>
+<li>火狐不支持innerText属性，用了类似的textContent属性，而.text()方法综合了2个属性的支持，所以可以兼容所有浏览器</li>
+</ol>
+<h4 id="13、-val-方法"><a href="#13、-val-方法" class="headerlink" title="13、.val()方法"></a>13、.val()方法</h4><p>.val()方法主要是用于处理表单元素的值，比如 input, select 和 textarea。</p>
+<ul>
+<li>.val()无参数，获取匹配的元素集合中第一个元素的当前值</li>
+<li>.val( value )，设置匹配的元素集合中每个元素的值</li>
+<li>.val( function ) ，一个用来返回设置值的函数</li>
+</ul>
+<p><strong>需要注意的是，</strong></p>
+<ol>
+<li>通过.val()处理select元素， 当没有选择项被选中，它返回null </li>
+<li>.val()方法多用来设置表单的字段的值</li>
+<li>如果select元素有multiple（多选）属性，并且至少一个选择项被选中， .val()方法返回一个数组，这个数组包含每个选中选择项的值</li>
+</ol>
+<h4 id="14、-html-、-text-和-val-的区别"><a href="#14、-html-、-text-和-val-的区别" class="headerlink" title="14、.html()、.text()和.val()的区别"></a>14、.html()、.text()和.val()的区别</h4><p><strong>（1）.html()、.text()、.val()三种方法都是用来读取选定元素的内容，</strong></p>
+<p>只不过， </p>
+<ul>
+<li>(1).html()是用来读取元素的html内容（包括html标签），</li>
+</ul>
+<ul>
+<li>(2).text()用来读取元素的纯文本内容，包括其后代元素，</li>
+</ul>
+<ul>
+<li>(3).val()是用来读取表单元素的”value”值，</li>
+</ul>
+<ul>
+<li>(4).html()和.text()方法不能使用在表单元素上，而.val()只能使用在表单元素上，</li>
+</ul>
+<ul>
+<li>(5).html()方法使用在多个元素上时，只读取第一个元素，</li>
+</ul>
+<ul>
+<li>(6)如果应用在多个元素上时，.val()方法和.html()相同，只能读取第一个表单元素的”value”值，</li>
+</ul>
+<ul>
+<li>(7)如果.text()应用在多个元素上时，将会读取所有选中元素的文本内容。</li>
+</ul>
+<p><strong>（2）.html(htmlString),.text(textString)和.val(value)三种方法都是用来替换选中元素的内容，如果三个方法同时运用在多个元素上时，那么将会替换所有选中元素的内容。</strong></p>
+<p><strong>（3）.html(),.text(),.val()都可以使用回调函数的返回值来动态的改变多个元素的内容。</strong></p>
+<h4 id="15、-remove-方法"><a href="#15、-remove-方法" class="headerlink" title="15、.remove()方法"></a>15、.remove()方法</h4><p>可以彻底删除一个HTML元素，</p>
+<pre><code>$(document).ready(function(){
+    $(&quot;#target1&quot;).remove();
+})
+</code></pre><p><img src="https://img-blog.csdnimg.cn/20181217221210419.png" alt="在这里插入图片描述"></p>
+<h4 id="16、-appendTo-方法"><a href="#16、-appendTo-方法" class="headerlink" title="16、.appendTo()方法"></a>16、.appendTo()方法</h4><p>把选中的HTML元素附加到其他元素中，</p>
+<pre><code>$(document).ready(function(){
+    $(&quot;#target1&quot;).appendTo(&quot;#right&quot;);
+})
+</code></pre><p><img src="https://img-blog.csdnimg.cn/20181217221232260.png" alt="在这里插入图片描述"></p>
+<h4 id="17、-clone-方法"><a href="#17、-clone-方法" class="headerlink" title="17、.clone()方法"></a>17、.clone()方法</h4><p>将元素从一个地方复制到另一个地方，</p>
+<pre><code>$(document).ready(function(){
+    $(&quot;#target1&quot;).clone().appendTo(&quot;#right&quot;);
+})
+</code></pre><p>将两个jQuery方法合在一起使用,这种叫方法链function chaining。<br><img src="https://img-blog.csdnimg.cn/20181217221256665.png" alt="在这里插入图片描述"></p>
+<h4 id="18、-parent-方法"><a href="#18、-parent-方法" class="headerlink" title="18、.parent()方法"></a>18、.parent()方法</h4><p>允许访问选定元素的父元素，</p>
+<pre><code>$(document).ready(function(){
+    $(&quot;#target1&quot;).parent().css(&quot;background-color&quot;,&quot;red&quot;);
+})
+</code></pre><p><img src="https://img-blog.csdnimg.cn/20181217221327544.png" alt="在这里插入图片描述"></p>
+<h4 id="19、-children-方法"><a href="#19、-children-方法" class="headerlink" title="19、.children()方法"></a>19、.children()方法</h4><p>可以访问选定元素的子元素，</p>
+<pre><code>$(document).ready(function(){
+    $(&quot;#right&quot;).children().css(&quot;color&quot;,&quot;red&quot;);
+})
+</code></pre><p><img src="https://img-blog.csdnimg.cn/20181217221352908.png" alt="在这里插入图片描述"></p>
+
+      
+    </div>
+    
+    
+    
+	
+	<div>
+	  
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:16px;">-------------END-------------</div>
+    
+</div>
+	  
+	</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/FovNartuo.github.io/tags/jQuery/" rel="tag"># jQuery</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/FovNartuo.github.io/2018/12/16/HTTP基础知识/" rel="next" title="HTTP基础知识">
+                <i class="fa fa-chevron-left"></i> HTTP基础知识
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            OverView
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">bertZuo</p>
+              <p class="site-description motion-element" itemprop="description">The harder you work, the more progress you make.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/FovNartuo.github.io/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/FovNartuo" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="384699526@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                my blog
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.csdn.net/bertZuo" title="CSDN" target="_blank">CSDN</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://gitee.com/bertZuo" title="Gitee" target="_blank">Gitee</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、addClass-方法"><span class="nav-number">1.</span> <span class="nav-text">1、addClass()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、removeClass-方法"><span class="nav-number">2.</span> <span class="nav-text">2、removeClass()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、切换样式-toggleClass"><span class="nav-number">3.</span> <span class="nav-text">3、切换样式.toggleClass()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、-css-方法"><span class="nav-number">4.</span> <span class="nav-text">4、.css()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、-css-与-addClass-设置样式的区别"><span class="nav-number">5.</span> <span class="nav-text">5、.css()与.addClass()设置样式的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（1）可维护性"><span class="nav-number">5.0.1.</span> <span class="nav-text">（1）可维护性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#（2）灵活性"><span class="nav-number">5.0.2.</span> <span class="nav-text">（2）灵活性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#（3）样式值"><span class="nav-number">5.0.3.</span> <span class="nav-text">（3）样式值</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#（4）样式的优先级"><span class="nav-number">5.0.4.</span> <span class="nav-text">（4）样式的优先级</span></a></li></ol></li></ol><li class="nav-item nav-level-4"><a class="nav-link" href="#6、-prop-方法"><span class="nav-number">6.</span> <span class="nav-text">6、.prop()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7、-attr-方法"><span class="nav-number">7.</span> <span class="nav-text">7、.attr()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8、attribute和property的区别"><span class="nav-number">8.</span> <span class="nav-text">8、attribute和property的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9、-removeAttr"><span class="nav-number">9.</span> <span class="nav-text">9、.removeAttr()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10、-html-方法"><span class="nav-number">10.</span> <span class="nav-text">10、.html()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11、-text-方法"><span class="nav-number">11.</span> <span class="nav-text">11、.text()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12、-html与-text的异同"><span class="nav-number">12.</span> <span class="nav-text">12、.html与.text的异同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13、-val-方法"><span class="nav-number">13.</span> <span class="nav-text">13、.val()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#14、-html-、-text-和-val-的区别"><span class="nav-number">14.</span> <span class="nav-text">14、.html()、.text()和.val()的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#15、-remove-方法"><span class="nav-number">15.</span> <span class="nav-text">15、.remove()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#16、-appendTo-方法"><span class="nav-number">16.</span> <span class="nav-text">16、.appendTo()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#17、-clone-方法"><span class="nav-number">17.</span> <span class="nav-text">17、.clone()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#18、-parent-方法"><span class="nav-number">18.</span> <span class="nav-text">18、.parent()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#19、-children-方法"><span class="nav-number">19.</span> <span class="nav-text">19、.children()方法</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">bertZuo</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/three/three-waves.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/three/canvas_sphere.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/FovNartuo.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/FovNartuo.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/FovNartuo.github.io/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/FovNartuo.github.io/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/FovNartuo.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/FovNartuo.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/FovNartuo.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
