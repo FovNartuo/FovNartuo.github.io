@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="计算机基础,">
+  <meta name="keywords" content="JavaScript,">
 
 
 
@@ -105,21 +105,18 @@
 
 
 
-<meta name="description" content="前言在学习node.js时，网址解析这部分内容涉及到HTTP知识。通信协议HTTP，全称HyperText Transfer Protocol。在了解这块知识之前得先理解URL和URI。 URL和URI URL：Uniform Resource Identifier   统一资源标志符 URI ：Universal Resouce Locator   统一资源定位符">
-<meta name="keywords" content="计算机基础">
+<meta name="description" content="首先，了解一下this关键字。this关键字就涉及到函数调用的内容。函数的几种调用方式:  普通函数调用 作为方法来调用 作为构造函数来调用 使用apply/call方法来调用 Function.prototype.bind方法 ES6箭头函数  但是不管函数是按哪种方法来调用的，都需要记住一点：谁调用这个函数或方法，this关键字就指向谁。">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTP基础知识">
-<meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/16/HTTP基础知识/index.html">
+<meta property="og:title" content="JavaScript中this关键字改变指向的三种方法（apply、call、bind）">
+<meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/18/JavaScript中this关键字改变指向的三种方法（apply、call、bind）/index.html">
 <meta property="og:site_name" content="左文东博客">
-<meta property="og:description" content="前言在学习node.js时，网址解析这部分内容涉及到HTTP知识。通信协议HTTP，全称HyperText Transfer Protocol。在了解这块知识之前得先理解URL和URI。 URL和URI URL：Uniform Resource Identifier   统一资源标志符 URI ：Universal Resouce Locator   统一资源定位符">
+<meta property="og:description" content="首先，了解一下this关键字。this关键字就涉及到函数调用的内容。函数的几种调用方式:  普通函数调用 作为方法来调用 作为构造函数来调用 使用apply/call方法来调用 Function.prototype.bind方法 ES6箭头函数  但是不管函数是按哪种方法来调用的，都需要记住一点：谁调用这个函数或方法，this关键字就指向谁。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20181216215907364.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20181216220325162.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2018-12-16T14:11:25.443Z">
+<meta property="og:updated_time" content="2018-12-18T15:42:14.642Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTTP基础知识">
-<meta name="twitter:description" content="前言在学习node.js时，网址解析这部分内容涉及到HTTP知识。通信协议HTTP，全称HyperText Transfer Protocol。在了解这块知识之前得先理解URL和URI。 URL和URI URL：Uniform Resource Identifier   统一资源标志符 URI ：Universal Resouce Locator   统一资源定位符">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20181216215907364.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70">
+<meta name="twitter:title" content="JavaScript中this关键字改变指向的三种方法（apply、call、bind）">
+<meta name="twitter:description" content="首先，了解一下this关键字。this关键字就涉及到函数调用的内容。函数的几种调用方式:  普通函数调用 作为方法来调用 作为构造函数来调用 使用apply/call方法来调用 Function.prototype.bind方法 ES6箭头函数  但是不管函数是按哪种方法来调用的，都需要记住一点：谁调用这个函数或方法，this关键字就指向谁。">
 
 
 
@@ -149,13 +146,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/16/HTTP基础知识/">
+  <link rel="canonical" href="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/18/JavaScript中this关键字改变指向的三种方法（apply、call、bind）/">
 
 
 
 
 
-  <title>HTTP基础知识 | 左文东博客</title>
+  <title>JavaScript中this关键字改变指向的三种方法（apply、call、bind） | 左文东博客</title>
   
 
 
@@ -296,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2018/12/16/HTTP基础知识/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2018/12/18/JavaScript中this关键字改变指向的三种方法（apply、call、bind）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="bertZuo">
@@ -313,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HTTP基础知识</h1>
+          <h1 class="post-title" itemprop="name headline">JavaScript中this关键字改变指向的三种方法（apply、call、bind）</h1>
         
 
         <div class="post-meta">
@@ -325,8 +322,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-16T22:04:46+08:00">
-                2018-12-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-18T23:40:07+08:00">
+                2018-12-18
               </time>
             
 
@@ -363,83 +360,141 @@
       
 
       
-        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>在学习node.js时，网址解析这部分内容涉及到HTTP知识。通信协议HTTP，全称HyperText Transfer Protocol。在了解这块知识之前得先理解URL和URI。</p>
-<h4 id="URL和URI"><a href="#URL和URI" class="headerlink" title="URL和URI"></a>URL和URI</h4><ol>
-<li>URL：Uniform Resource Identifier   统一资源标志符</li>
-<li>URI ：Universal Resouce Locator   统一资源定位符</li>
+        <p>首先，了解一下this关键字。this关键字就涉及到函数调用的内容。函数的几种调用方式:</p>
+<ol>
+<li>普通函数调用</li>
+<li>作为方法来调用</li>
+<li>作为构造函数来调用</li>
+<li>使用apply/call方法来调用</li>
+<li>Function.prototype.bind方法</li>
+<li>ES6箭头函数</li>
 </ol>
+<p>但是不管函数是按哪种方法来调用的，都需要记住一点：谁调用这个函数或方法，this关键字就指向谁。</p>
 <a id="more"></a>
-<p>譬如，</p>
-<pre><code>http://imooc.com:8080/course/list?from-scott&amp;course-node#floor1
-</code></pre><p>这样复杂的一个地址都包含了什么部分？</p>
-<ol>
-<li>protocol    底层使用的协议，http:</li>
-<li>slashes    协议的双斜线，//</li>
-<li>auth    null</li>
-<li>host</li>
-<li>域名/IP地址，imooc.com:8080</li>
-<li>port    端口，8080</li>
-<li>hostname    主机名，imooc.com</li>
-<li>hash    哈希值，对应页面某个锚点，#floor1</li>
-<li>search    查询字符串参数，?from-scott&amp;course-node</li>
-<li>query    发送给http服务器的数据，from-scott&amp;course-node</li>
-<li>pathname    访问资源的路径名，/course/list</li>
-<li>path    路径，/course/list?from-scott&amp;course-node</li>
-<li>href    未被解析的完整url</li>
-</ol>
-<p>以上是nodejs中url.parse解析一个url所得到的结果，下面主要来了解一下HTTP的相关知识。</p>
-<h4 id="URL和URI的关系"><a href="#URL和URI的关系" class="headerlink" title="URL和URI的关系"></a>URL和URI的关系</h4><p><img src="https://img-blog.csdnimg.cn/20181216215907364.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h4 id="HHTP和HTTPS区别"><a href="#HHTP和HTTPS区别" class="headerlink" title="HHTP和HTTPS区别"></a>HHTP和HTTPS区别</h4><p>HTTP协议用于从网络传输超文本数据到本地浏览器的传输协议，它可保证高效而准确的传送超文本文档。</p>
-<p>HTTPS（HyperText Transfer Protocol over Secure Socket Layer）以安全为目标的HTTP通道，HTTP中加入SSL层，是HTTP的安全版。</p>
-<p>HTTP请求过程</p>
-<ol>
-<li>http客户端发起请求，创建端口。</li>
-<li>http服务器在端口监听客户端的请求。</li>
-<li>http服务器向客户端返回状态和状态码<br><img src="https://img-blog.csdnimg.cn/20181216220325162.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-</ol>
-<p><strong>其中request包含四个部分：</strong></p>
-<ol>
-<li>Request Method  请求方法</li>
-<li>Request URL</li>
-<li>Request Headers</li>
-<li>Request Body</li>
-</ol>
-<h4 id="Request-Method"><a href="#Request-Method" class="headerlink" title="Request Method"></a>Request Method</h4><p>GET请求：在浏览器中输入URL，变发起了GET<br>POST请求，大多在表单提交时发起</p>
-<h5 id="GET-和-POST-区别"><a href="#GET-和-POST-区别" class="headerlink" title="GET 和 POST 区别"></a>GET 和 POST 区别</h5><p>get请求中的参数含在URL中，显式可见。post请求的URL不包含这些数据，以表单数据形式提交的数据最多1024字节，而对此get请求是没有限制的。</p>
-<h5 id="其他的请求方式"><a href="#其他的请求方式" class="headerlink" title="其他的请求方式"></a>其他的请求方式</h5><ol>
-<li>HEAD，类似GET，返回的响应中没有具体内容，用于获取报头。</li>
-<li>PUT，从客户端向服务器传送的数据取代指定文档中的内容。</li>
-<li>DELETE，请求服务器删除指定的页面。</li>
-<li>CONNECT，把服务器当跳板，让服务器替代客户端访问其他页面。</li>
-<li>OPTIONS，允许客户端查看服务器的性能。</li>
-<li>TRACE，回显服务器收到的请求，主要用于测试/诊断。</li>
-</ol>
-<h4 id="Request-URL"><a href="#Request-URL" class="headerlink" title="Request URL"></a>Request URL</h4><p>统一资源定位符，唯一确定想要请求的资源。</p>
-<h4 id="Request-Headers"><a href="#Request-Headers" class="headerlink" title="Request Headers"></a>Request Headers</h4><p>请求头，用来说明服务器要使用的附加信息。</p>
-<h4 id="常用的头形象"><a href="#常用的头形象" class="headerlink" title="常用的头形象"></a>常用的头形象</h4><ol>
-<li>Accept，请求报头域    用于指定客户端可接受哪些类型信息</li>
-<li>Accept-Language     指定客户端可接受的语言类型</li>
-<li>Accept-Encoding    指定客户端可接受的内容编码</li>
-<li>Host    用于指定请求资源的主机IP和端口号，其内容为请求 URL的原始服务器或网关的位置</li>
-<li>Cookies    网站为辨别用户进行会话跟踪而存储在用户本地的数据，主要功能：维护当前访问会话</li>
-<li>Deferer    用来标识这个请求是从哪个页面发出来的，服务器获取这一信息并作出相应处理</li>
-<li>User_Agent    让服务器识别客户端使用的操作系统及其版本，浏览器及其版本</li>
-<li>Content_type    互联网媒体类型</li>
-</ol>
-<h4 id="Request-Body"><a href="#Request-Body" class="headerlink" title="Request Body"></a>Request Body</h4><p>请求体中承载的内容是POST请求中的表单数据。对于GET请求，请求体为空。</p>
-<h4 id="Response-响应"><a href="#Response-响应" class="headerlink" title="Response 响应"></a>Response 响应</h4><ol>
-<li>Response Status Code 响应状态码，即服务器响应状态</li>
-<li>Response Header  包含了服务器对请求的应答信息</li>
-<li>Response Body</li>
-</ol>
-<h4 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h4><ul>
-<li>1xx     请求已接收，正在处理</li>
-<li>2xx    请求已接收，处理完成。譬如200，表示OK</li>
-<li>3xx    完成该请求预计更近一步的操作</li>
-<li>4xx    客户端错误，可能请求有语法错误。400：客户端语法错误，401：请求未被授权，403：请求被拒绝，404：资源没找到</li>
-<li>5xx    服务器端错误。500：服务器发生不可预计的错误，503：服务器当前无法处理请求</li>
-</ul>
+<h4 id="普通函数调用"><a href="#普通函数调用" class="headerlink" title="普通函数调用"></a>普通函数调用</h4><pre><code>var age = 18;
+function person(){
+    this.name = &quot;Tony&quot;;
+    console.log(this);      //window
+    console.log(this.name); //Tony
+    console.log(this.age);  //18
+}
+person();
+</code></pre><p>代码中定义一个普通函数person，在调用时实际上person是作为全局对象window的一个方法来进行调用的，即window.person();<br>因此是window对象调用了person方法，那么person函数当中的this即指window，同时window还拥有了另外一个属性name,值为“Tony”。</p>
+<p>定义一个全局变量age，它相当于是window的一个属性。在调用person函数时它的this指向window，所以在函数内部可以访问到age变量，这也解释了函数内部可访问全局变量。</p>
+<h4 id="作为方法来调用"><a href="#作为方法来调用" class="headerlink" title="作为方法来调用"></a>作为方法来调用</h4><pre><code>var person = {
+    name : &quot;Tony&quot;,
+    showName:function(){
+        console.log(this.name);
+    }
+}
+person.showName();
 
+var name = &quot;Tom&quot;;
+var showname = person.showName;
+showname();
+</code></pre><p>定义一个对象person包含一个showName的方法，在对象person内调用方法返回的是Tony，显然this指向了对象person。</p>
+<p>再定义一个全局变量name，将person.showName方法赋值给变量showname，因为在全局定义的嘛，所以showname也相当于window的一个属性，此时调用showname它的this是指向window的，所以返回的值就是全局变量“Tom”。</p>
+<pre><code>var personA = {
+    name : &quot;Tony&quot;,
+    showName:function(){
+        console.log(this.name);
+    }
+}
+var personB = {
+    name : &quot;Tom&quot;,
+    sayName:personA.showName
+}
+personB.sayName();    //Tom
+</code></pre><p>personB对象中的方法调用personA中的方法，虽然showName是personA中定义的，但调用了personB，那this就指向了personB。</p>
+<h4 id="作为构造函数来调用"><a href="#作为构造函数来调用" class="headerlink" title="作为构造函数来调用"></a>作为构造函数来调用</h4><pre><code>function Person(name){
+    this.name = name;
+}
+var personA = new Person(&quot;Tony&quot;);
+console.log(personA.name);
+</code></pre><p>构造函数new出来的实例，this指向这个实例对象。</p>
+<p>下面就来了解一下this指向改变的三种方法。</p>
+<p>在JavaScript中，call、apply和bind是Function对象自带的三个方法，这三个方法的主要作用是改变函数中的this指向。所以可知它们的共同点就是都用来改变函数的this对象的指向的；还有就是三者第一个参数都是this要指向的对象，也就是想指定的上下文（函数的每次调用都会拥有一个特殊值——本次调用的上下文（context）——这就是this关键字的值。），然后再利用后续参数传参。而它们的不同也就是传参的不同，bind 是返回对应函数，便于稍后调用；apply 、call 则是立即调用 。</p>
+<h4 id="apply-方法"><a href="#apply-方法" class="headerlink" title="apply()方法"></a>apply()方法</h4><p>它接收两个参数，一个是函数运行的作用域（this），另一个是参数数组。</p>
+<p><strong>语法</strong>：</p>
+<pre><code>apply([thisObj [,argArray] ]);
+</code></pre><p><strong>定义</strong>：应用某一对象的一个方法，用另一个对象替换当前对象</p>
+<p><strong>说明</strong>：如果argArray不是一个有效数组或不是arguments对象，那么将导致一个 TypeError，如果没有提供argArray和thisObj任何一个参数，那么Global对象将用作thisObj。</p>
+<pre><code>function Person(name){
+    this.name = name;
+    this.showName = function(){
+        console.log(this.name);
+    }
+}
+function Student(name){
+    Person.apply(this,arguments);
+}
+var stu = new Student(&quot;Tony&quot;);
+stu.showName();
+</code></pre><h4 id="call-方法"><a href="#call-方法" class="headerlink" title="call()方法"></a>call()方法</h4><p>它第一个参数和apply()方法的一样，但是传递给函数的参数必须列举出来。</p>
+<p><strong>语法</strong>：</p>
+<pre><code>call([thisObject[,arg1 [,arg2 [,...,argn]]]]);
+</code></pre><p><strong>定义</strong>：调用一个对象的一个方法，以另一个对象替换当前对象。</p>
+<p><strong>说明</strong>： call方法可以用来代替另一个对象调用一个方法，call方法可以将一个函数的对象上下文从初始的上下文改变为thisObj指定的新对象。</p>
+<p>thisObj取值的情况：</p>
+<ol>
+<li>不传，或者传null,undefined， 函数中的this指向window对象</li>
+<li>传递另一个函数的函数名，函数中的this指向这个函数的引用</li>
+<li>传递字符串、数值或布尔类型等基础类型，函数中的this指向其对应的包装对象，如 String、Number、Boolean</li>
+<li>传递一个对象，函数中的this指向这个对象</li>
+</ol>
+<p>call方法的一些常见例子：</p>
+<p>1.</p>
+<pre><code>function add(a,b){
+    console.log(a+b);
+}
+function subtraction(a,b){
+    console.log(a-b);
+}
+add.call(subtraction,3,1);    //4
+</code></pre><p>定义一个加法函数、加法函数，最后的调用语句意思就是用加法替代了减法，在减法函数中通过call方法改变了this的指向，已经不再计算a-b，而是作用加法中的a+b。</p>
+<p>2.</p>
+<pre><code>function Student(){
+    this.name = &quot;Tom&quot;;
+    this.showName = function(){
+        console.log(this.name);
+    }
+}
+function Teacher(){
+    this.name = &quot;Tony&quot;;
+}
+var stu = new Student();
+var tea = new Teacher();
+stu.showName.call(tea);
+</code></pre><p>定义一个学生函数，它有属性name和方法showName，而老师函数只有name属性，最后一个调用语句的意思就是把学生的方法用到了老师函数中执行，即便老师是没有这个方法的。</p>
+<p>3.</p>
+<pre><code>function Parent(name){
+    this.name = name;
+    this.showName = function(){
+        console.log(this.name);
+    }
+}
+function Son(name){
+    Parent.call(this,name);
+}
+var baby = new Son(&quot;Tony&quot;);
+baby.showName();
+</code></pre><p>Parent.call(this,name)意思就是使用父母这个对象替代掉儿子函数中的this对象，那么这个儿子函数中就可以直接调用父母对象中的属性和方法，这也就是继承。</p>
+<h4 id="bind-方法"><a href="#bind-方法" class="headerlink" title="bind()方法"></a>bind()方法</h4><p>bind()最简单的用法是创建一个函数，使这个函数不论怎么调用都有同样的this值。</p>
+<pre><code>var person = {
+    name : &quot;Tony&quot;,
+    showName : function(){
+        console.log(this.name);
+    }
+}
+person.showName();      //Tony
+
+var name = &quot;Tom&quot;;
+var getName = person.showName;
+getName();              //Tom
+
+var boundGetName = getName.bind(person);
+boundGetName();         //Tony
+</code></pre>
       
     </div>
     
@@ -466,7 +521,7 @@
       
         <div class="post-tags">
           
-            <a href="/FovNartuo.github.io/tags/计算机基础/" rel="tag"># 计算机基础</a>
+            <a href="/FovNartuo.github.io/tags/JavaScript/" rel="tag"># JavaScript</a>
           
         </div>
       
@@ -479,8 +534,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/FovNartuo.github.io/2018/12/14/二进制-了解计算机的源头/" rel="next" title="二进制-了解计算机的源头">
-                <i class="fa fa-chevron-left"></i> 二进制-了解计算机的源头
+              <a href="/FovNartuo.github.io/2018/12/18/余数-取余操作就是哈希函数/" rel="next" title="余数-取余操作就是哈希函数">
+                <i class="fa fa-chevron-left"></i> 余数-取余操作就是哈希函数
               </a>
             
           </div>
@@ -488,10 +543,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/FovNartuo.github.io/2018/12/17/jQuery-方法/" rel="prev" title="jQuery-方法">
-                jQuery-方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -648,7 +699,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URL和URI"><span class="nav-number">2.</span> <span class="nav-text">URL和URI</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URL和URI的关系"><span class="nav-number">3.</span> <span class="nav-text">URL和URI的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HHTP和HTTPS区别"><span class="nav-number">4.</span> <span class="nav-text">HHTP和HTTPS区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Request-Method"><span class="nav-number">5.</span> <span class="nav-text">Request Method</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#GET-和-POST-区别"><span class="nav-number">5.1.</span> <span class="nav-text">GET 和 POST 区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他的请求方式"><span class="nav-number">5.2.</span> <span class="nav-text">其他的请求方式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Request-URL"><span class="nav-number">6.</span> <span class="nav-text">Request URL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Request-Headers"><span class="nav-number">7.</span> <span class="nav-text">Request Headers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的头形象"><span class="nav-number">8.</span> <span class="nav-text">常用的头形象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Request-Body"><span class="nav-number">9.</span> <span class="nav-text">Request Body</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Response-响应"><span class="nav-number">10.</span> <span class="nav-text">Response 响应</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#状态码"><span class="nav-number">11.</span> <span class="nav-text">状态码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#普通函数调用"><span class="nav-number">1.</span> <span class="nav-text">普通函数调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作为方法来调用"><span class="nav-number">2.</span> <span class="nav-text">作为方法来调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作为构造函数来调用"><span class="nav-number">3.</span> <span class="nav-text">作为构造函数来调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#apply-方法"><span class="nav-number">4.</span> <span class="nav-text">apply()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#call-方法"><span class="nav-number">5.</span> <span class="nav-text">call()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bind-方法"><span class="nav-number">6.</span> <span class="nav-text">bind()方法</span></a></li></ol></div>
             
 
           </div>
