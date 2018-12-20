@@ -293,6 +293,140 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2018/12/20/事件冒泡初认识/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="bertZuo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/FovNartuo.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左文东博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/FovNartuo.github.io/2018/12/20/事件冒泡初认识/" itemprop="url">事件冒泡初认识</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-20T22:18:35+08:00">
+                2018-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>说是初认识，其实也不算了，刚学习JS时就已经听过事件的冒泡和捕获的大名，但真是不知所云，也是不求甚解，迷惑了很久，今天终决定好好来了解一下这个冒泡。</p>
+<p>在此之前呢，不得不提一下<strong>事件流</strong>：描述的是从页面中接受事件的顺序。</p>
+<h4 id="什么是冒泡"><a href="#什么是冒泡" class="headerlink" title="什么是冒泡"></a>什么是冒泡</h4><blockquote>
+<p>当事件发生后，这个事件就要开始传播(从里到外或者从外向里)。为什么要传播呢？因为事件源本身（可能）并没有处理事件的能力，即处理事件的函数（方法）并未绑定在该事件源上。例如我们点击一个按钮时，就会产生一个click事件，但这个按钮本身可能不能处理这个事件，事件必须从这个按钮传播出去，从而到达能够处理这个事件的代码中（例如我们给按钮的onclick属性赋一个函数的名字，就是让这个函数去处理该按钮的click事件），或者按钮的父级绑定有事件函数，当该点击事件发生在按钮上，按钮本身并无处理事件函数，则传播到父级去处理。</p>
+</blockquote>
+<p> 按我自己的理解，冒泡就真的是鱼儿吐泡泡一样，从水底冒一个泡咕噜咕噜漂到了水面，这个顺序是自下往上的；而捕获呢，就像捕鱼一样从水面上撒网沉到水底，这个顺序是自上往下的。这样类比到DOM树中应该就能够记得很形象了。也就是说，事件冒泡 ：当一个元素接收到事件的时候，会把它接收到的事件传给自己的父级，一直到window。</p>
+<p>但有一点需要注意的，这里传递的仅仅是事件，并不传递所绑定的事件函数。所以如果父级没有绑定事件函数，就算传递了事件，也不会有什么表现，但事件确实是传递了。我们用代码来具体的表示，</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/FovNartuo.github.io/2018/12/20/事件冒泡初认识/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+	
+	<div>
+	  
+	</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2018/12/18/JavaScript中this关键字改变指向的三种方法（apply、call、bind）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1455,134 +1589,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2018/12/10/var，let，const区别/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="bertZuo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/FovNartuo.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="左文东博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/FovNartuo.github.io/2018/12/10/var，let，const区别/" itemprop="url">var，let，const区别</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T20:31:01+08:00">
-                2018-12-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>let 和 const 是ES6中新增用来定义变量的。</strong></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/FovNartuo.github.io/2018/12/10/var，let，const区别/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-	
-	<div>
-	  
-	</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1633,7 +1639,7 @@
               
                 <a href="/FovNartuo.github.io/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
