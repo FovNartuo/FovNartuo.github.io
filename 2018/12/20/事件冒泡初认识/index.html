@@ -116,7 +116,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20181220221453934.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20181220221538136.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20181220221643893.png">
-<meta property="og:updated_time" content="2018-12-20T14:23:45.077Z">
+<meta property="og:updated_time" content="2018-12-20T14:28:20.267Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="事件冒泡初认识">
 <meta name="twitter:description" content="说是初认识，其实也不算了，刚学习JS时就已经听过事件的冒泡和捕获的大名，但真是不知所云，也是不求甚解，迷惑了很久，今天终决定好好来了解一下这个冒泡。 在此之前呢，不得不提一下事件流：描述的是从页面中接受事件的顺序。 什么是冒泡 当事件发生后，这个事件就要开始传播(从里到外或者从外向里)。为什么要传播呢？因为事件源本身（可能）并没有处理事件的能力，即处理事件的函数（方法）并未绑定在该事件源上。例如我">
@@ -420,8 +420,7 @@ for(var i=0; i&lt;li.length; i++){
 <li>IE：window.event.srcElement</li>
 <li><p>标准的W3C 方式：event.target</p>
 <p>那么做一下兼容性处理，JS部分变为：</p>
-<p> var ul = document.getElementById(“ul”);<br> var li = ul.getElementsByTagName(“li”);</p>
-<p> ul.onclick = function(ev){</p>
+<p> var ul = document.getElementById(“ul”);<br> var li = ul.getElementsByTagName(“li”);<br> ul.onclick = function(ev){</p>
 <pre><code>var event = ev || window.event;
 var target = event.target ||event.srcElement;
 target.style.background = &quot;red&quot;;
