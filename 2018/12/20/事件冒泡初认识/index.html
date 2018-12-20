@@ -116,7 +116,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20181220221453934.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20181220221538136.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20181220221643893.png">
-<meta property="og:updated_time" content="2018-12-20T14:21:51.854Z">
+<meta property="og:updated_time" content="2018-12-20T14:23:45.077Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="事件冒泡初认识">
 <meta name="twitter:description" content="说是初认识，其实也不算了，刚学习JS时就已经听过事件的冒泡和捕获的大名，但真是不知所云，也是不求甚解，迷惑了很久，今天终决定好好来了解一下这个冒泡。 在此之前呢，不得不提一下事件流：描述的是从页面中接受事件的顺序。 什么是冒泡 当事件发生后，这个事件就要开始传播(从里到外或者从外向里)。为什么要传播呢？因为事件源本身（可能）并没有处理事件的能力，即处理事件的函数（方法）并未绑定在该事件源上。例如我">
@@ -369,9 +369,9 @@
 <h4 id="什么是冒泡"><a href="#什么是冒泡" class="headerlink" title="什么是冒泡"></a>什么是冒泡</h4><blockquote>
 <p>当事件发生后，这个事件就要开始传播(从里到外或者从外向里)。为什么要传播呢？因为事件源本身（可能）并没有处理事件的能力，即处理事件的函数（方法）并未绑定在该事件源上。例如我们点击一个按钮时，就会产生一个click事件，但这个按钮本身可能不能处理这个事件，事件必须从这个按钮传播出去，从而到达能够处理这个事件的代码中（例如我们给按钮的onclick属性赋一个函数的名字，就是让这个函数去处理该按钮的click事件），或者按钮的父级绑定有事件函数，当该点击事件发生在按钮上，按钮本身并无处理事件函数，则传播到父级去处理。</p>
 </blockquote>
+<a id="more"></a>
 <p> 按我自己的理解，冒泡就真的是鱼儿吐泡泡一样，从水底冒一个泡咕噜咕噜漂到了水面，这个顺序是自下往上的；而捕获呢，就像捕鱼一样从水面上撒网沉到水底，这个顺序是自上往下的。这样类比到DOM树中应该就能够记得很形象了。也就是说，事件冒泡 ：当一个元素接收到事件的时候，会把它接收到的事件传给自己的父级，一直到window。</p>
 <p>但有一点需要注意的，这里传递的仅仅是事件，并不传递所绑定的事件函数。所以如果父级没有绑定事件函数，就算传递了事件，也不会有什么表现，但事件确实是传递了。我们用代码来具体的表示，</p>
-<a id="more"></a>
 <p> HTML结构：</p>
 <pre><code>&lt;div id=&quot;div1&quot; style=&quot;width: 50px;height: 50px;background: red;&quot;&gt;
     &lt;div id=&quot;div2&quot; style=&quot;width: 30px;height: 30px;background: blue;&quot;&gt;&lt;/div&gt;
