@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="ES6,">
+  <meta name="keywords" content="博客,JavaScript,前端开发,HTML,CSS">
 
 
 
@@ -105,18 +105,18 @@
 
 
 
-<meta name="description" content="let 和 const 是ES6中新增用来定义变量的。">
-<meta name="keywords" content="ES6">
+<meta name="description" content="ul,ol样式ul,ol变化不大,只修改了margin值  &amp;lt;ul&amp;gt;     &amp;lt;li&amp;gt;你瞅啥&amp;lt;/li&amp;gt;     &amp;lt;li&amp;gt;瞅你咋地&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;">
+<meta name="keywords" content="web,html,css,javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="var，let，const区别">
-<meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/10/var，let，const区别/index.html">
+<meta property="og:title" content="bootstrap-列表样式">
+<meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/2019/01/01/bootstrap-列表样式/index.html">
 <meta property="og:site_name" content="左文东博客">
-<meta property="og:description" content="let 和 const 是ES6中新增用来定义变量的。">
+<meta property="og:description" content="ul,ol样式ul,ol变化不大,只修改了margin值  &amp;lt;ul&amp;gt;     &amp;lt;li&amp;gt;你瞅啥&amp;lt;/li&amp;gt;     &amp;lt;li&amp;gt;瞅你咋地&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-11T15:20:19.276Z">
+<meta property="og:updated_time" content="2019-01-01T15:13:48.895Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="var，let，const区别">
-<meta name="twitter:description" content="let 和 const 是ES6中新增用来定义变量的。">
+<meta name="twitter:title" content="bootstrap-列表样式">
+<meta name="twitter:description" content="ul,ol样式ul,ol变化不大,只修改了margin值  &amp;lt;ul&amp;gt;     &amp;lt;li&amp;gt;你瞅啥&amp;lt;/li&amp;gt;     &amp;lt;li&amp;gt;瞅你咋地&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;">
 
 
 
@@ -146,13 +146,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/10/var，let，const区别/">
+  <link rel="canonical" href="https://github.com/FovNartuo/FovNartuo.github.io/2019/01/01/bootstrap-列表样式/">
 
 
 
 
 
-  <title>var，let，const区别 | 左文东博客</title>
+  <title>bootstrap-列表样式 | 左文东博客</title>
   
 
 
@@ -293,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2018/12/10/var，let，const区别/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2019/01/01/bootstrap-列表样式/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="bertZuo">
@@ -310,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">var，let，const区别</h1>
+          <h1 class="post-title" itemprop="name headline">bootstrap-列表样式</h1>
         
 
         <div class="post-meta">
@@ -322,8 +322,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T20:31:01+08:00">
-                2018-12-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-01T23:12:43+08:00">
+                2019-01-01
               </time>
             
 
@@ -360,74 +360,82 @@
       
 
       
-        <p><strong>let 和 const 是ES6中新增用来定义变量的。</strong></p>
-<a id="more"></a>
-<h3 id="var"><a href="#var" class="headerlink" title="var"></a>var</h3><p>var语句用来声明JavaScript变量，在学习JS入门最基础了解的知识，也就是在ES5阶段，所有变量的声明都是用var。</p>
-<pre><code>var a=1;
-alert(a);
-</code></pre><h3 id="let"><a href="#let" class="headerlink" title="let"></a>let</h3><p>let同样是用来定义变量。</p>
-<pre><code>let a=1;
-alert(a);
-</code></pre><h3 id="var-和-let-区别"><a href="#var-和-let-区别" class="headerlink" title="var 和 let 区别"></a>var 和 let 区别</h3><p>既然 var 和 let 都是用来定义变量，那么它们之间必然是存在区别，否则ES6中何故新增这一用法。</p>
-<p><strong>1、let 自带块级作用域，它作用于代码块中，{}包含起来的就是代码块，而这也就形成了一个作用域。因此 let 只能在代码块中使用。然而 var 只有函数作用域。</strong></p>
-<pre><code>{
-    var a=1;
-}
-alert(a);
-</code></pre><p>var 声明的变量在代码块中，外部调用这个变量仍然可以使用。</p>
-<pre><code>{
-    let a=1;
-}
-alert(a);
-</code></pre><p>let 声明的变量在代码块外调用就会报错，提示a没有被定义，这就说明了 let 只能在代码块中使用。</p>
-<p><strong>2、var 声明的变量可以重复，但是 let 不允许重复声明。</strong></p>
-<pre><code>var a=1;
-var a=2;
-alert(a);
-</code></pre><p>显然这是正确的，后一个声明的 a 覆盖了之前的，返回结果就是 2。</p>
-<pre><code>let a=1;
-let a=2;
-alert(a);
-</code></pre><p>会提示报错，“Identifier ‘a’ has already been declared”。</p>
-<h3 id="let-用途"><a href="#let-用途" class="headerlink" title="let 用途"></a>let 用途</h3><p>正是因为 let 有块级作用域，这便简化了ES5中封闭空间的实现。那先回顾一下所谓的封闭空间。JavaScript 中没用私有作用域的概念，如果在多人开发的项目上，你在全局或局部作用域中声明了一些变量，可能会被其他人不小心用同名的变量给覆盖掉，根据javascript函数作用域链的特性，可以使用这种技术可以模仿一个私有作用域，用匿名函数作为一个“容器”，“容器”内部可以访问外部的变量，而外部环境不能访问“容器”内部的变量，所以( function(){…} )()内部定义的变量不会和外部的变量发生冲突，俗称 “匿名包裹器” 或 “命名空间”。这也就是立即执行函数的用途。</p>
-<pre><code>(function(){
-    var a=1;
-})()
-alert(a);
-</code></pre><p>如上就是一个很简单的模拟私有作用域，在外部调用 a 则会报错未定义，然而这样的形式太过复杂，有了 let 则会简便很多。譬如，设置三个按钮，不同编号，在点击按钮会弹出相应的编号。</p>
-<pre><code>&lt;input type=&quot;button&quot; value=&quot;按钮1&quot;&gt;
-&lt;input type=&quot;button&quot; value=&quot;按钮2&quot;&gt;
-&lt;input type=&quot;button&quot; value=&quot;按钮3&quot;&gt;
-&lt;script&gt;
-    var btn = document.getElementsByTagName(&quot;input&quot;);
-    for(var i=0; i&lt;btn.length; i++){
-        (function(i){
-            btn[i].onclick=function(){
-                alert(&quot;按钮&quot;+parseInt(i+1));
-            }
-        })(i)
-    }
-&lt;/script&gt;
-</code></pre><p>这里就用到了立即执行函数，也就是在for循环中增加了( function(){…} )()这样的写法。用 let 就会简单多了，相当于替代了理解执行函数的用法。</p>
-<pre><code>var btn = document.getElementsByTagName(&quot;input&quot;);
-for(let i=0; i&lt;btn.length; i++){
-    btn[i].onclick=function(){
-        alert(&quot;按钮&quot;+parseInt(i+1));
-    }
-}
-</code></pre><h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><p>const用来定义常量。一旦赋值，以后再也无法修改。</p>
-<pre><code>const a=1;
-a=2;    //报错
-</code></pre><p>并且，const声明时必须给初始值， 不能重复声明。</p>
-<pre><code>const a;
-a=1;  //报错
-
-
-const a=1;
-const a=2;  //报错
-</code></pre><p><strong>const用途</strong></p>
-<p>为了防止意外修改变量，比如引入库名，组件名。</p>
-<!-- more -->
+        <h4 id="ul-ol样式"><a href="#ul-ol样式" class="headerlink" title="ul,ol样式"></a>ul,ol样式</h4><p>ul,ol变化不大,只修改了margin值 </p>
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;你瞅啥&lt;/li&gt;
+    &lt;li&gt;瞅你咋地&lt;/li&gt;
+&lt;/ul&gt; 
+</code></pre><a id="more"></a>
+<p>底部有个20px的边距,顶部么有 。</p>
+<pre><code>&lt;ol&gt;
+    &lt;li&gt;你瞅啥&lt;/li&gt;
+    &lt;li&gt;瞅你咋地&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre><p>嵌套的ul,ol会发现没有了margin值 </p>
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;窗前明月光&lt;/li&gt;
+    &lt;li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;疑是地上霜&lt;/li&gt;
+            &lt;li&gt;
+                &lt;ol&gt;
+                    &lt;li&gt;举头望明月&lt;/li&gt;
+                    &lt;li&gt;低头思故乡&lt;/li&gt;
+                &lt;/ol&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><p>清除默认样式,不仅仅是list-style,还padding-left: 0 </p>
+<pre><code>&lt;ol&gt;
+    &lt;li&gt;有序项目列表一&lt;/li&gt;
+    &lt;li&gt;有序项目列表二
+        &lt;ol class=&quot;list-unstyled&quot;&gt;
+            &lt;li&gt;有序项目列表一&lt;/li&gt;
+            &lt;li&gt;有序项目列表二
+                &lt;ul&gt;
+                    &lt;li&gt;无序项目列表一&lt;/li&gt;
+                    &lt;li&gt;无序项目列表二
+                        &lt;ul class=&quot;list-unstyled&quot;&gt;
+                            &lt;li&gt;无序项目列表一&lt;/li&gt;
+                            &lt;li&gt;无序项目列表二&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;无序项目列表三&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;有序项目列表三&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;有序项目列表三&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre><h4 id="内联列表"><a href="#内联列表" class="headerlink" title="内联列表"></a>内联列表</h4><p>把垂直列表换成水平列表,而且去掉项目符号（编号）,保持水平显示,为制作水平导航而生。 </p>
+<pre><code>&lt;ul class=&quot;list-inline&quot;&gt;
+    &lt;li&gt;HTML5&lt;/li&gt;
+    &lt;li&gt;CSS3&lt;/li&gt;
+    &lt;li&gt;JavaScirpt&lt;/li&gt;
+    &lt;li&gt;Vue.js&lt;/li&gt;
+    &lt;li&gt;node.js&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><h4 id="定义列表"><a href="#定义列表" class="headerlink" title="定义列表"></a>定义列表</h4><p>没有做什么修改,dl(底部边距20px),dt(加粗),dd(去除左边距) </p>
+<pre><code>&lt;dl&gt;
+    &lt;dt&gt;雨果&lt;/dt&gt;
+    &lt;dd&gt;让自己的内心藏着一条巨龙，既是一种苦刑，也是一种乐趣。&lt;/dd&gt;
+    &lt;dt&gt;苏轼&lt;/dt&gt;
+    &lt;dd&gt;古之立大事者，不惟有超世之才，亦必有坚忍不拔之志。&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre><p>水平定义列表</p>
+<p>源码中添加了一个媒体查询。也就是说，只有屏幕大于768px的时候，添加类名“.dl-horizontal”才具有水平定义列表效果。其实现主要方式：</p>
+<p>（1）将dt设置了一个左浮动，并且设置了一个宽度为160px<br>（2）将dd设置一个margin-left的值为180px，达到水平的效果<br>（3）当标题宽度超过160px时，将会显示三个省略号</p>
+<pre><code>&lt;dl class=&quot;dl-horizontal&quot;&gt;
+    &lt;dt&gt;卢梭&lt;/dt&gt;
+    &lt;dd&gt;当我们只遇到逆风行舟的时候，我们调整航向迂回行驶就可以了;但是，当海面上波涛汹涌，而我们想停在原地的时候，那就要抛锚。当心啊，年轻的舵手，别让你的缆绳松了，别让你的船锚动摇，不要在你没有发觉以前，船就漂走了。&lt;/dd&gt;
+    &lt;dt&gt;诸葛亮&lt;/dt&gt;
+    &lt;dd&gt;夫学须志也，才须学也，非学无以广才，非志无以成学。&lt;/dd&gt;
+    &lt;dt&gt;秋瑾说：“水激石则鸣，人激志则宏”&lt;/dt&gt;
+    &lt;dd&gt;水激石则鸣，人激志则宏。&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
       
     </div>
     
@@ -452,12 +460,6 @@ const a=2;  //报错
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/FovNartuo.github.io/tags/ES6/" rel="tag"># ES6</a>
-          
-        </div>
-      
 
       
       
@@ -467,8 +469,8 @@ const a=2;  //报错
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/FovNartuo.github.io/2018/12/09/ES6字符串模板/" rel="next" title="ES6字符串模板">
-                <i class="fa fa-chevron-left"></i> ES6字符串模板
+              <a href="/FovNartuo.github.io/2018/12/27/Bootstrap-文本样式/" rel="next" title="Bootstrap-文本样式">
+                <i class="fa fa-chevron-left"></i> Bootstrap-文本样式
               </a>
             
           </div>
@@ -476,10 +478,6 @@ const a=2;  //报错
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/FovNartuo.github.io/2018/12/11/赋值数组/" rel="prev" title="赋值数组">
-                赋值数组 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -636,7 +634,7 @@ const a=2;  //报错
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#var"><span class="nav-number">1.</span> <span class="nav-text">var</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#let"><span class="nav-number">2.</span> <span class="nav-text">let</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#var-和-let-区别"><span class="nav-number">3.</span> <span class="nav-text">var 和 let 区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#let-用途"><span class="nav-number">4.</span> <span class="nav-text">let 用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#const"><span class="nav-number">5.</span> <span class="nav-text">const</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#ul-ol样式"><span class="nav-number">1.</span> <span class="nav-text">ul,ol样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内联列表"><span class="nav-number">2.</span> <span class="nav-text">内联列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义列表"><span class="nav-number">3.</span> <span class="nav-text">定义列表</span></a></li></ol></div>
             
 
           </div>
