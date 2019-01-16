@@ -1819,7 +1819,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #69ffc9;
+  background: #d170d9;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3113,4 +3113,46 @@ a {
 }
 .post-button a:hover {
   color: #7784ba;
+}
+.posts-collapse .post {
+  margin: 6px 0;
+}
+.posts-collapse .post-header::before {
+  content: " ";
+  position: absolute;
+  left: 8px;
+  top: 12px;
+  width: 6px;
+  height: 6px;
+  margin-left: -4px;
+  background: #bbb;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  transition-property: background;
+}
+.posts-collapse .post-title {
+  margin-left: 70px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: inherit;
+}
+.posts-collapse .post-meta {
+  position: absolute;
+  font-size: 12px;
+  left: 26px;
+  top: 4px;
+}
+.posts-collapse .collection-title {
+  position: relative;
+  margin: 40px 0;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
 }
