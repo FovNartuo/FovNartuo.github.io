@@ -105,22 +105,18 @@
 
 
 
-<meta name="description" content="说是初认识，其实也不算了，刚学习JS时就已经听过事件的冒泡和捕获的大名，但真是不知所云，也是不求甚解，迷惑了很久，今天终决定好好来了解一下这个冒泡。 在此之前呢，不得不提一下事件流：描述的是从页面中接受事件的顺序。 什么是冒泡 当事件发生后，这个事件就要开始传播(从里到外或者从外向里)。为什么要传播呢？因为事件源本身（可能）并没有处理事件的能力，即处理事件的函数（方法）并未绑定在该事件源上。例如我">
+<meta name="description" content="&amp;#8195;&amp;#8195;在ECMAScript中，Function（函数）类型实际上是对象，每个函数都是Function类型的实例，而且都与其他引用类型一样具有属性和方法。由于函数是对象，因此函数名 实际上也是一个指向函数对象的指针。">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="事件冒泡初认识">
-<meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/20/事件冒泡初认识/index.html">
+<meta property="og:title" content="JavaScript学习记录-函数">
+<meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/2019/01/20/JavaScript学习记录-函数/index.html">
 <meta property="og:site_name" content="左文东博客">
-<meta property="og:description" content="说是初认识，其实也不算了，刚学习JS时就已经听过事件的冒泡和捕获的大名，但真是不知所云，也是不求甚解，迷惑了很久，今天终决定好好来了解一下这个冒泡。 在此之前呢，不得不提一下事件流：描述的是从页面中接受事件的顺序。 什么是冒泡 当事件发生后，这个事件就要开始传播(从里到外或者从外向里)。为什么要传播呢？因为事件源本身（可能）并没有处理事件的能力，即处理事件的函数（方法）并未绑定在该事件源上。例如我">
+<meta property="og:description" content="&amp;#8195;&amp;#8195;在ECMAScript中，Function（函数）类型实际上是对象，每个函数都是Function类型的实例，而且都与其他引用类型一样具有属性和方法。由于函数是对象，因此函数名 实际上也是一个指向函数对象的指针。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20181220221453934.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20181220221538136.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20181220221643893.png">
-<meta property="og:updated_time" content="2018-12-20T14:28:20.267Z">
+<meta property="og:updated_time" content="2019-01-20T11:35:35.277Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="事件冒泡初认识">
-<meta name="twitter:description" content="说是初认识，其实也不算了，刚学习JS时就已经听过事件的冒泡和捕获的大名，但真是不知所云，也是不求甚解，迷惑了很久，今天终决定好好来了解一下这个冒泡。 在此之前呢，不得不提一下事件流：描述的是从页面中接受事件的顺序。 什么是冒泡 当事件发生后，这个事件就要开始传播(从里到外或者从外向里)。为什么要传播呢？因为事件源本身（可能）并没有处理事件的能力，即处理事件的函数（方法）并未绑定在该事件源上。例如我">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20181220221453934.png">
+<meta name="twitter:title" content="JavaScript学习记录-函数">
+<meta name="twitter:description" content="&amp;#8195;&amp;#8195;在ECMAScript中，Function（函数）类型实际上是对象，每个函数都是Function类型的实例，而且都与其他引用类型一样具有属性和方法。由于函数是对象，因此函数名 实际上也是一个指向函数对象的指针。">
 
 
 
@@ -150,13 +146,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/FovNartuo/FovNartuo.github.io/2018/12/20/事件冒泡初认识/">
+  <link rel="canonical" href="https://github.com/FovNartuo/FovNartuo.github.io/2019/01/20/JavaScript学习记录-函数/">
 
 
 
 
 
-  <title>事件冒泡初认识 | 左文东博客</title>
+  <title>JavaScript学习记录-函数 | 左文东博客</title>
   
 
 
@@ -297,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2018/12/20/事件冒泡初认识/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2019/01/20/JavaScript学习记录-函数/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="bertZuo">
@@ -314,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">事件冒泡初认识</h1>
+          <h1 class="post-title" itemprop="name headline">JavaScript学习记录-函数</h1>
         
 
         <div class="post-meta">
@@ -326,8 +322,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-20T22:18:35+08:00">
-                2018-12-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-20T19:34:09+08:00">
+                2019-01-20
               </time>
             
 
@@ -364,96 +360,108 @@
       
 
       
-        <p>说是初认识，其实也不算了，刚学习JS时就已经听过事件的冒泡和捕获的大名，但真是不知所云，也是不求甚解，迷惑了很久，今天终决定好好来了解一下这个冒泡。</p>
-<p>在此之前呢，不得不提一下<strong>事件流</strong>：描述的是从页面中接受事件的顺序。</p>
-<h4 id="什么是冒泡"><a href="#什么是冒泡" class="headerlink" title="什么是冒泡"></a>什么是冒泡</h4><blockquote>
-<p>当事件发生后，这个事件就要开始传播(从里到外或者从外向里)。为什么要传播呢？因为事件源本身（可能）并没有处理事件的能力，即处理事件的函数（方法）并未绑定在该事件源上。例如我们点击一个按钮时，就会产生一个click事件，但这个按钮本身可能不能处理这个事件，事件必须从这个按钮传播出去，从而到达能够处理这个事件的代码中（例如我们给按钮的onclick属性赋一个函数的名字，就是让这个函数去处理该按钮的click事件），或者按钮的父级绑定有事件函数，当该点击事件发生在按钮上，按钮本身并无处理事件函数，则传播到父级去处理。</p>
-</blockquote>
-<a id="more"></a>
-<p> 按我自己的理解，冒泡就真的是鱼儿吐泡泡一样，从水底冒一个泡咕噜咕噜漂到了水面，这个顺序是自下往上的；而捕获呢，就像捕鱼一样从水面上撒网沉到水底，这个顺序是自上往下的。这样类比到DOM树中应该就能够记得很形象了。也就是说，事件冒泡 ：当一个元素接收到事件的时候，会把它接收到的事件传给自己的父级，一直到window。</p>
-<p>但有一点需要注意的，这里传递的仅仅是事件，并不传递所绑定的事件函数。所以如果父级没有绑定事件函数，就算传递了事件，也不会有什么表现，但事件确实是传递了。我们用代码来具体的表示，</p>
-<p> HTML结构：</p>
-<pre><code>&lt;div id=&quot;div1&quot; style=&quot;width: 50px;height: 50px;background: red;&quot;&gt;
-    &lt;div id=&quot;div2&quot; style=&quot;width: 30px;height: 30px;background: blue;&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre><p>JS部分：</p>
-<pre><code>var div1 = document.getElementById(&quot;div1&quot;);
-var div2 = document.getElementById(&quot;div2&quot;);
-div2.onclick = function(){
-    alert(&quot;div2&quot;);
+        <p>&#8195;&#8195;在ECMAScript中，Function（函数）类型实际上是对象，每个函数都是Function类型的实例，而且都与其他引用类型一样具有属性和方法。由于函数是对象，因此函数名 实际上也是一个指向函数对象的指针。<br><a id="more"></a></p>
+<h4 id="函数的声明"><a href="#函数的声明" class="headerlink" title="函数的声明"></a>函数的声明</h4><p>(1) 普通的函数声明</p>
+<pre><code>function test(num1,num2){
+    return num1+num2;
 }
-div1.onclick = function(){
-    alert(&quot;div1&quot;);
+</code></pre><p>(2) 使用变量初始化函数</p>
+<pre><code>var test = function(num1,num2){
+    return num1+num2;
+};
+</code></pre><h4 id="作为值的函数"><a href="#作为值的函数" class="headerlink" title="作为值的函数"></a>作为值的函数</h4><p>&#8195;&#8195;ECMAScript中函数名本身就是变量，所以函数也可以作为值来使用。换言之，可以像传递参数一样将一个函数传递给另一个函数，也可以将一个函数作为另一个函数的结果返回。</p>
+<pre><code>function test(sumFunction,num){
+    return sumFunction(num);
 }
-</code></pre><p>这段小代码很简单，定义了一个父子关系的div元素，分别增加了点击事件。当我们点击子元素div2时，先会弹出它自身的事件“div2”，然后又弹出了“div1”。这就说明了点击子元素的时候不仅仅触发了子元素自己的事件，它的父元素事件也被触发 了。这样的现象就叫做冒泡。</p>
-<p>再举个例子，还是刚刚的代码，我们来做一些小修改，删除子元素的点击事件！<br><img src="https://img-blog.csdnimg.cn/20181220221453934.png" alt="在这里插入图片描述"></p>
-<p>可以看一下最终的效果图，当点击子元素div2时，会弹出事件“div1”，这再次证明了触发了冒泡模式，当点击了没有绑定事件的子元素，父元素的点击事件被触发，执行了自己绑定的函数。此外，这种事件的触发，和CSS样式是没有关系的。可以改变父子元素的position位置，分离两个元素的位置，这时仍会触发冒泡。</p>
-<p>当然，如果只删除了父元素div1的点击事件，那点击子元素时只会触发子元素的事件，而传递给父元素的只是事件，但因为父元素自身没有绑定任何事件，就算传递给它事件，父元素仍然无法触发事件。</p>
-<h4 id="冒泡的优点"><a href="#冒泡的优点" class="headerlink" title="冒泡的优点"></a>冒泡的优点</h4><p>至此，我们算是初认识了事件冒泡，会不会感觉这没什么用呀，其实冒泡真有一大优点，就是产生了事件委托。所谓事件委托：</p>
-<blockquote>
-<p>事件委托：<br>由于事件的冒泡，我们点击子元素的时候，会把事件一层层的传递给父级元素。相反的，我们操作元素的时候，直接把事件绑定在父级元素上，而不是分别给子元素绑定事件。通过判断子元素，从而达到同样的效果</p>
-</blockquote>
-<p>先上例子，假设情形：有5个列表，我们点击其中一个就会改变其背景颜色为红色。<br><img src="https://img-blog.csdnimg.cn/20181220221538136.png" alt="在这里插入图片描述"></p>
-<p> HTML结构很简单：</p>
-<pre><code>&lt;ul id=&quot;ul&quot;&gt;
-    &lt;li&gt;这就是个测试&lt;/li&gt;
-    &lt;li&gt;这就是个测试&lt;/li&gt;
-    &lt;li&gt;这就是个测试&lt;/li&gt;
-    &lt;li&gt;这就是个测试&lt;/li&gt;
-    &lt;li&gt;这就是个测试&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre><p>JS部分：</p>
-<pre><code>var ul = document.getElementById(&quot;ul&quot;);
-var li = ul.getElementsByTagName(&quot;li&quot;);
-for(var i=0; i&lt;li.length; i++){
-    li[i].onclick = function(){
-        this.style.background = &quot;red&quot;;
+
+function sum(num){
+    return num+10;
+}
+
+var result = test(sum,10);
+alert(result);
+</code></pre><p>&#8195;&#8195;对上例做一个详解：函数test里面有两个参数sum和10，也就是第一条语句中sumFunction为sum，num为10，返回的结果sunFunction(10)，这个也就是第二个函数，返回结果10+10=20。</p>
+<h4 id="函数内部属性"><a href="#函数内部属性" class="headerlink" title="函数内部属性"></a>函数内部属性</h4><p>&#8195;&#8195;在函数内部，有两个特殊的对象：(1) arguments，(2) this。</p>
+<p>&#8195;&#8195;（1）arguments是一个类数组对象，包含着传入函数中的所有参数，主要用途是保存函数参数。arguments这个对象还有一个属性callee，这个属性是一个指针，指向拥有arguments对象的函数。</p>
+<pre><code>function test(num){
+    if(num &lt;= 1){
+        return 1;
+    }
+    else{
+        return num*test(num-1);
     }
 }
-</code></pre><p>通过循环给每一个 li 加事件，感觉应该也没什么问题，但其实这是非常耗费性能的。就算不考虑性能吧，那就假设一个很极端的情况，如果我想在第6个位置添加一个div元素，第7个位置添加一个p元素，同样的内容要实现同样的效果，那是不是就需要另外给这个div和p分别添加一个点击事假，这就很麻烦了。</p>
-<p>如果我们可以给父元素ul添加事件，作用于全部子元素，那不是一劳永逸嘛，而这个就是通过冒泡模式进行的事件委托实现的。但是这就会有个问题，我选中的是ul，那么点击其中的任一 li 时，岂不是全部的 ul 列表都变红了嘛，这与初始需求相违背了。这就需要新概念的登场了，能够准确获取你当前鼠标所指的 li 的事件源。</p>
-<blockquote>
-<p>事件源：不管事件绑定在那个元素中，都指的是实际触发事件的那个的目标</p>
-</blockquote>
-<p>这也存在IE的兼容性问题：</p>
-<ul>
-<li>IE：window.event.srcElement</li>
-<li><p>标准的W3C 方式：event.target</p>
-<p>那么做一下兼容性处理，JS部分变为：</p>
-<p> var ul = document.getElementById(“ul”);<br> var li = ul.getElementsByTagName(“li”);<br> ul.onclick = function(ev){</p>
-<pre><code>var event = ev || window.event;
-var target = event.target ||event.srcElement;
-target.style.background = &quot;red&quot;;
-</code></pre><p> }</p>
-</li>
-</ul>
-<p>这样就很好的提高了性能，而且在增加其他子元素时候，同样可以满足需求。</p>
-<h4 id="冒泡的缺点"><a href="#冒泡的缺点" class="headerlink" title="冒泡的缺点"></a>冒泡的缺点</h4><p>但是哟，冒泡模式也存在一些困扰，譬如假设一个情形：<br><img src="https://img-blog.csdnimg.cn/20181220221643893.png" alt="在这里插入图片描述"></p>
-<p>需求是，点击div1时候，能够让div2显示，再点击其他地方时会让div2隐藏。那JS可以这样写： </p>
-<pre><code>var div1 = document.getElementById(&quot;div1&quot;);
-var div2 = document.getElementById(&quot;div2&quot;);
+alert(test(5));    //返回结果120
+</code></pre><p>&#8195;&#8195;对于阶乘函数一般要用到递归算法，所以函数内部一定会调用自身。如果函数名不改变是没有问题的，但一旦改变函数名，内部的自身调用需要逐一修改，这在后期维护过程中就显得非常繁琐。为了解决这个问题，我们可以使用arguments.callee来代替。</p>
+<pre><code>function test(num){
+    if(num&lt;=1){
+        return 1;
+    }
+    else{
+        return num*arguments.callee(num-1);//arguments.callee指向这个函数
+    }
+}
+alert(test(5));
+</code></pre><p>&#8195;&#8195;（2）this对象，其行为与Java和C#中的this大致相似。换言之，this引用的是函数用以执行操作的对象，或者说函数调用语句所处的那个作用域。note：当在全局作用域中调用函数时，this对象引用的就是window。</p>
+<pre><code>window.color = &quot;红色&quot;;    //全局的color
+alert(this.color);    //打印全局的color,这里的this就是window
 
-div1.onclick = function(){
-    div2.style.display = &quot;block&quot;;
+var test ={
+    color:&quot;蓝色&quot;,    //这里的color是test下的属性，也就是局部变量
+    sayColor:function(){
+        alert(this.color);    //此时的this只能在test里的color
+    }
+};
+
+test.sayColor();    //打印局部的color
+alert(this.color);    //
+</code></pre><h4 id="函数属性和方法"><a href="#函数属性和方法" class="headerlink" title="函数属性和方法"></a>函数属性和方法</h4><p>&#8195;&#8195;ECMAScript中的函数是对象，因此函数也有属性和方法。每个函数都包含两个属性：length和prototype。其中，length属性表示函数希望接受的命名参数的个数。</p>
+<pre><code>function test(name,age){
+    alert(name+age);
 }
-document.onclick = function(){
-    div2.style.display = &quot;none&quot;;
+alert(test.length);
+</code></pre><p>&#8195;&#8195;prototype属性，是保存所有实例方法的真正所在，也就是原型。prototype下有两个方法：apply()和call()，每个函数都包含这两个非继承而来的方法。这两个方法的用途都在特定的作用域中调用函数，实际上等于设置函数体内this对象的值。</p>
+<pre><code>function test(num1,num2){
+    return num1+num2;    //原函数
 }
-</code></pre><p>去浏览器验证最终效果，很神奇的发现点击了红色部分，蓝色方块消失了！明明是需要让它显示的嘛，看一下我们写的代码，逻辑很简单直白，完全无懈可击呀。</p>
-<p>这就是冒泡惹的祸，由于事件冒泡，点击div1时候，事件向上传递，一直传到了document，而此时的document也绑定了自己的事件，那就正好触发了，也就是让蓝色方块隐藏了。所以，也不能说点击红色方块没有让蓝色方块显示，而是这个过程太短暂 了，还没显示呢就已经触发了最终的document的事件。可以在div1事件中添加一个弹框用来测试是否进行了这一步骤。</p>
-<p>因此，这种情况下我们就不希望存在冒泡了，那就需要用到取消事件的冒泡的两种方式：</p>
-<ul>
-<li>标准的W3C 方式：e.stopPropagation();这里的stopPropagation是标准的事件对象的一个方法，调用即可</li>
-<li>非标准的IE方式:ev.cancelBubble=true;  这里的cancelBubble是 IE事件对象的属性，设为true就可以了</li>
-</ul>
-<p>因为这存在IE和其他浏览器的差异，所以会做一个判断，封装成一个函数：</p>
-<pre><code>function stopBubble(e) {
-   if ( e &amp;&amp; e.stopPropagation )
-      e.stopPropagation();
-  else
-    window.event.cancelBubble = true;
+
+function sayTest1(num1,num2){
+    return test.apply(this,[num1,num2]);//this表示作用域，此处是window，[]中test所需要的参数
 }
-</code></pre><p>首先，判断这个浏览器是否支持stopPropagation()，如果支持说明是非IE，可以使用标准的W3C方式，不然就是用IE提供的办法。有了这样一个阻止冒泡的函数，那就在div1事件中调用这个函数，让我们点击div1时不会再往上冒泡传递事件，也就不会触发到document的事件了，这样当初的需求完美实现了。</p>
+
+function sayTest2(num1,num2){
+    return test.apply(this,arguments);//arguments对象表示test所需要的参数
+} 
+
+alert(sayTest1(10,10));    //输出结果20
+alert(sayTest2(10,10));    //输出结果20
+</code></pre><p>&#8195;&#8195;call()方法与apply()方法相同，其区别仅仅在于接收参数的方式不同。对于call()方法而言，第一个参数是作用域，没有变化，变化只是其余的参数都是直接传递给函数的。</p>
+<pre><code>function test(num1, num2) {
+    return num1 + num2;
+}
+
+function sayTest(num1, num2) {
+    return test.call(this, num1, num2);            //和apply区别在于后面的传参
+}
+
+alert(sayTest(10,10));    //输出结果20
+</code></pre><p>&#8195;&#8195;事实上，apply()方法和call()方法并不只用于传递参数，他们经常使用的地方是能够扩展函数依赖以运行的作用域。</p>
+<pre><code>var color = &apos;红色&apos;;    //全局    
+var test = {    
+    color : &apos;蓝色&apos;    //局部
+};
+
+function sayColor() {
+    alert(this.color);
+}
+
+sayColor();            //作用域在window，红色
+
+//用call来实现对象冒充，改变作用域
+sayColor.call(this);        //作用域在window，红色
+sayColor.call(window);        //作用域在window，红色
+sayColor.call(test);        //作用域在test对象里面，蓝色
+</code></pre><p>&#8195;&#8195;使用call()或者apply()来扩充作用域的最大好处，就是对象不需要与方法发生任何耦合关系(耦合，就是互相关联的意思，扩展和维护会发生连锁反应)。换言之，test对象和sayColor()方法之间不会有多余的关联操作，譬如test.sayColor = sayColor;</p>
 
       
     </div>
@@ -494,8 +502,8 @@ document.onclick = function(){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/FovNartuo.github.io/2018/12/18/JavaScript中this关键字改变指向的三种方法（apply、call、bind）/" rel="next" title="JavaScript中this关键字改变指向的三种方法（apply、call、bind）">
-                <i class="fa fa-chevron-left"></i> JavaScript中this关键字改变指向的三种方法（apply、call、bind）
+              <a href="/FovNartuo.github.io/2019/01/16/ES6面向对象/" rel="next" title="ES6面向对象">
+                <i class="fa fa-chevron-left"></i> ES6面向对象
               </a>
             
           </div>
@@ -503,10 +511,6 @@ document.onclick = function(){
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/FovNartuo.github.io/2018/12/23/Sass初认识/" rel="prev" title="Sass初认识">
-                Sass初认识 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -663,7 +667,7 @@ document.onclick = function(){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是冒泡"><span class="nav-number">1.</span> <span class="nav-text">什么是冒泡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#冒泡的优点"><span class="nav-number">2.</span> <span class="nav-text">冒泡的优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#冒泡的缺点"><span class="nav-number">3.</span> <span class="nav-text">冒泡的缺点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数的声明"><span class="nav-number">1.</span> <span class="nav-text">函数的声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作为值的函数"><span class="nav-number">2.</span> <span class="nav-text">作为值的函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数内部属性"><span class="nav-number">3.</span> <span class="nav-text">函数内部属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数属性和方法"><span class="nav-number">4.</span> <span class="nav-text">函数属性和方法</span></a></li></ol></div>
             
 
           </div>
