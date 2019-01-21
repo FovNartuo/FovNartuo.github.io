@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/FovNartuo.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Comic Sans MS:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/FovNartuo.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/FovNartuo.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/FovNartuo.github.io/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/FovNartuo.github.io/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/FovNartuo.github.io/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/FovNartuo.github.io/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="TypeScript,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="字符串新特性多行字符串&amp;#8195;&amp;#8195;这里需要用到反引号，即Tab键上的 ~ 键，所谓多行字符串就是字符串可以换行输出。 var str = `aaa bbb ccc`;">
+<meta name="keywords" content="TypeScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TypeScript基础知识">
+<meta property="og:url" content="https://github.com/FovNartuo/FovNartuo.github.io/2019/01/21/TypeScript基础知识/index.html">
+<meta property="og:site_name" content="左文东博客">
+<meta property="og:description" content="字符串新特性多行字符串&amp;#8195;&amp;#8195;这里需要用到反引号，即Tab键上的 ~ 键，所谓多行字符串就是字符串可以换行输出。 var str = `aaa bbb ccc`;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2019012115475229.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190121155015999.png">
+<meta property="og:updated_time" content="2019-01-21T14:31:28.100Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TypeScript基础知识">
+<meta name="twitter:description" content="字符串新特性多行字符串&amp;#8195;&amp;#8195;这里需要用到反引号，即Tab键上的 ~ 键，所谓多行字符串就是字符串可以换行输出。 var str = `aaa bbb ccc`;">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2019012115475229.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/FovNartuo.github.io/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/FovNartuo/FovNartuo.github.io/2019/01/21/TypeScript基础知识/">
+
+
+
+
+
+  <title>TypeScript基础知识 | 左文东博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband">
+		<a href="https://fovnartuo.github.io" class="github-corner" aria-label="View source on GitHub">
+			<svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+				<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/>
+				<path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+				<path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+			</svg>
+		</a>
+		<style>
+			.github-corner:hover 
+			.octo-arm{animation:octocat-wave 560ms ease-in-out}
+			@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}
+			@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+		</style>
+	</div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/FovNartuo.github.io/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">左文东博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">记录技术与生活</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/FovNartuo.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/FovNartuo.github.io/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            目录
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/FovNartuo.github.io/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/FovNartuo.github.io/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/FovNartuo/FovNartuo.github.io/FovNartuo.github.io/2019/01/21/TypeScript基础知识/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="bertZuo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/FovNartuo.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左文东博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">TypeScript基础知识</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-21T22:30:41+08:00">
+                2019-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="字符串新特性"><a href="#字符串新特性" class="headerlink" title="字符串新特性"></a>字符串新特性</h3><h4 id="多行字符串"><a href="#多行字符串" class="headerlink" title="多行字符串"></a>多行字符串</h4><p>&#8195;&#8195;这里需要用到反引号，即Tab键上的 ~ 键，所谓多行字符串就是字符串可以换行输出。</p>
+<pre><code>var str = `aaa
+bbb
+ccc`;
+</code></pre><a id="more"></a>
+<h4 id="字符串模板"><a href="#字符串模板" class="headerlink" title="字符串模板"></a>字符串模板</h4><p>&#8195;&#8195;其实都是ES6的语法，${element} 替代以前的 + 连接字符串。</p>
+<pre><code>var myname = &quot;Bert&quot;;
+var getName = function(){
+    return &quot;Zuo&quot;;
+}
+console.log(`Hello ${myname}`);
+console.log(`Hello ${getName()}`);
+console.log(`&lt;div&gt;
+&lt;span&gt;${myname}&lt;/span&gt;
+&lt;p&gt;${getName}&lt;/p&gt;
+&lt;div&gt;notice format&lt;/div&gt;
+&lt;/div&gt;`)
+</code></pre><h4 id="自动拆分字符串"><a href="#自动拆分字符串" class="headerlink" title="自动拆分字符串"></a>自动拆分字符串</h4><pre><code>function test(template,name,age){
+    console.log(template);
+    console.log(name);
+    console.log(age);
+}
+var myname = &quot;Bert&quot;;
+var getAge = function(){
+    return 18;
+}
+test `Hello,my name is ${myname},I&apos;m ${getAge()}.`;
+</code></pre><p>&#8195;&#8195;test 后直接跟反引号，其中字符串模板以 ${} 为分割，获得三部分内容存放在数组中也就是 template。</p>
+<h3 id="参数新特性"><a href="#参数新特性" class="headerlink" title="参数新特性"></a>参数新特性</h3><h4 id="参数类型"><a href="#参数类型" class="headerlink" title="参数类型"></a>参数类型</h4><p>&#8195;&#8195;在参数的后面使用<strong>冒号</strong>来指定参数的类型。</p>
+<pre><code>var myname: string = &quot;Bert&quot;;
+</code></pre><p>&#8195;&#8195;以上代码声明一个字符串类型的变量，在之后想要修改该变量，如果类型不是string就会报错，这大大帮助减少错误的发生。其实在typescript中，首次给变量赋的值类型会当其默认，之后改变类型的赋值都会报错。可以定义的类型有：<br>（1）any    任何类型</p>
+<pre><code>var name: any = &quot;Hello&quot;;
+</code></pre><p>（2）number    数值</p>
+<pre><code>var age: number = 18;
+</code></pre><p>（3）boolean    布尔类型</p>
+<pre><code>var man: boolean = true;
+</code></pre><p>（4）void    方法中无返回值</p>
+<pre><code>function test(): void{
+    // 无返回值
+}
+</code></pre><p>&#8195;&#8195;综上，写一个小例子：</p>
+<pre><code>function test(name: string): string{
+    return &quot;&quot;;
+}
+test(&quot;Bert&quot;);
+</code></pre><p>&#8195;&#8195;以上代码的意思是，这个 test 方法的返回值定义成 string 类型，输出其他类型会报错；方法中参数定义成 string 类型，调用方法是给的参数如果不是 string 类型会报错。<br>另外，有一种自定义类型的方法，可以帮助语法提示，提高效率。譬如：</p>
+<pre><code>// 声明自定义类型
+class Person{
+    name: String;
+    age: number;
+}
+var Tony: Person = new Person();
+// 自动语法提示
+Tony.name = &quot;托尼&quot;;
+Tony.age = 18;
+</code></pre><h4 id="参数默认值"><a href="#参数默认值" class="headerlink" title="参数默认值"></a>参数默认值</h4><p>&#8195;&#8195;在参数声明后面用<strong>等号</strong>来指定参数的默认值。在调用带参的函数方法时，传递的参数数量不足定义的参数数量，就会报错，设置默认值即可以不用传递全部参数。</p>
+<pre><code>function test(name: string, age: number, man: boolean=true){
+    console.log(name);
+    console.log(age);
+    console.log(man);
+}
+test(&quot;Bert&quot;,18);
+</code></pre><p>&#8195;&#8195;这儿有一个需要注意的地方。设置的默认参数，必须在所有参数的最后，这是因为如果第一个参数默认化，在调用时所传递参数是按顺序执行，第一个参数重新定义了默认的参数，那么最后会少一个参数的值。当然，可以全部定义默认值，这就没什么顺序问题了。</p>
+<h4 id="可选参数"><a href="#可选参数" class="headerlink" title="可选参数"></a>可选参数</h4><p>&#8195;&#8195;在方法的参数声明之后用<strong>问号</strong>来标明此参数为可选参数。可选参数如果不传递值的话，不会报错之后显示undefined。</p>
+<pre><code>function test(name: string, age?: number, man: boolean=true){
+    console.log(name);
+    console.log(age);
+    console.log(man);
+}
+test(&quot;Bert&quot;);
+</code></pre><h3 id="函数新特性"><a href="#函数新特性" class="headerlink" title="函数新特性"></a>函数新特性</h3><h4 id="Rest-and-Spread-操作符"><a href="#Rest-and-Spread-操作符" class="headerlink" title="Rest and Spread 操作符"></a>Rest and Spread 操作符</h4><p>&#8195;&#8195;这个操作符就是 … 它用来声明任意数量的方法参数。这儿有两个用法。<br>（1）传递任意数量的参数</p>
+<pre><code>function fun1(...args){
+    args.forEach(function(arg){
+        console.log(arg);
+    })
+}
+fun1([1, 2, 3, 4, 5]);
+</code></pre><p>（2）返回参数的用法</p>
+<pre><code>function fun2(a,b,c){
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+var args1 = [1,2];
+fun2(...args1);         //1,2,undefined
+
+var args2 = [5,6,7,8,9];
+fun2(...args2);         //5,6,7
+</code></pre><p>&#8195;&#8195;fun2中定义的参数有三个，args1传递的参数只有两个，少的会显示undefined，而如果传递参数多了，那多余的参数值不显示。</p>
+<h4 id="generator-函数"><a href="#generator-函数" class="headerlink" title="generator 函数"></a>generator 函数</h4><p>&#8195;&#8195;控制函数的执行过程， 手工暂停和恢复代码执行。（不太懂，似乎这样function*    就是generator）</p>
+<pre><code>function* getStockPrice(stock){
+    while(true){
+        yield Math.random()*100;
+    }
+}
+var priceGenerator = getStockPrice(&quot;IBM&quot;);
+var limitPrice = 15;
+var price = 100;
+while(price &gt; limitPrice){
+    price = priceGenerator.next().value;
+    console.log(`The generator return ${price}`);
+}
+console.log(`buying ar ${price}`);
+</code></pre><h4 id="destructuring析构表达式"><a href="#destructuring析构表达式" class="headerlink" title="destructuring析构表达式"></a>destructuring析构表达式</h4><p>&#8195;&#8195;通过表达式将对象或数组拆解成任意数量的变量。这儿有两个用法。<br>（1）析构表达式从对象中取值</p>
+<pre><code>function getInfo() { 
+    return {
+        name: {
+            firstName: &quot;Bert&quot;,
+            lastName:&quot;Zuo&quot;
+        },
+        age: 18
+    }
+}
+
+var { name: { lastName }, age:AGE } = getInfo();
+console.log(lastName);
+console.log(AGE);
+</code></pre><p>&#8195;&#8195;析构表达式中的变量名需要和函数方法中定义的相同，其实这一过程就是从函数方法中找到该变量。可以原变量值返回，也可以重命名一下，age:AGE就是返回age的值，只是多了一步以AGE名称输出。name对象里嵌套着对象，那析构表达式也是可以嵌套的。<br>（2）析构表达式从数组中取值</p>
+<pre><code>var arr1 = [1, 2, 3, 4];
+var [, , number1, number2] = arr1;
+console.log(number1);   //3
+console.log(number2);   //4
+
+var arr2 = [1, 2, 3, 4];
+var [number1, number2, ...other] = arr2;
+console.log(number1);   //1
+console.log(number2);   //2
+console.log(other);     //[3,4]
+
+var arr3 = [1, 2, 3, 4];
+function doSomething([number1, number2, ...other]) { 
+    console.log(number1);
+    console.log(number2);
+    console.log(other);
+}
+doSomething(arr3);    //1,2,[3,4]
+</code></pre><h3 id="箭头表达式"><a href="#箭头表达式" class="headerlink" title="箭头表达式"></a>箭头表达式</h3><h4 id="箭头表达式写法"><a href="#箭头表达式写法" class="headerlink" title="箭头表达式写法"></a>箭头表达式写法</h4><pre><code>// 占一行的写法
+var sum1 = (arg1, arg2) =&gt; arg1 + arg2;
+
+// 多行的写法
+var sum2 = (arg1, arg2)=&gt;{ 
+    return arg1 + arg2;
+}
+
+// 一个参数的写法
+var argNmae = arg =&gt; { 
+    console.log(arg);
+}
+
+// 无参数无返回的写法
+var ele = () =&gt; { 
+
+}
+</code></pre><h4 id="常见的应用"><a href="#常见的应用" class="headerlink" title="常见的应用"></a>常见的应用</h4><pre><code>var arr = [1, 2, 3, 4, 5];
+// filter()把传入的函数依次作用于每个元素，然后根据返回值是true还是false决定保留还是丢弃该元素。
+console.log(arr.filter(value =&gt; value % 2 == 0));
+</code></pre><h4 id="箭头函数的优势"><a href="#箭头函数的优势" class="headerlink" title="箭头函数的优势"></a>箭头函数的优势</h4><p>&#8195;&#8195;箭头函数的好处不仅仅在于简化了代码（把function（）转化为（）=&gt;），它最大的好处是解决了this指向问题。可以先看一下ES5中匿名函数导致的this指向问题：</p>
+<pre><code>function getName1(name) { 
+    this.name = name;
+
+    setInterval(function () { 
+        console.log(&quot;The name is &quot; + this.name);
+    },1000)
+}
+var name1 = new getName1(&quot;Bert&quot;);
+看一下结果，都没有值的显示，明明想要的是The name is Bert.
+</code></pre><p><img src="https://img-blog.csdnimg.cn/2019012115475229.png" alt="在这里插入图片描述"><br>&#8195;&#8195;改成箭头函数的写法：</p>
+<pre><code>function getName2(name: string) { 
+    this.name = name;
+
+    setInterval(() =&gt; { 
+        console.log(&quot;The name is &quot; + this.name);
+    },1000)
+}
+var age1 = new getName2(&quot;Bert&quot;);
+</code></pre><p><img src="https://img-blog.csdnimg.cn/20190121155015999.png" alt="在这里插入图片描述"></p>
+<h3 id="循环语法新特性"><a href="#循环语法新特性" class="headerlink" title="循环语法新特性"></a>循环语法新特性</h3><p>&#8195;&#8195;也是ES6的语法，新增了for of 循环，但这之前先看一下以前的 forEach, for in 这两个循环。</p>
+<h4 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h4><p>&#8195;&#8195;forEach循环不遍历属性，而且break无效。</p>
+<pre><code>var arr = [1, 2, 3, 4, 5];
+// 自定义一个数组属性
+arr.desc = &quot;five number&quot;;
+
+arr.forEach(value =&gt; console.log(value));
+</code></pre><h4 id="for-in"><a href="#for-in" class="headerlink" title="for in"></a>for in</h4><p>&#8195;&#8195;for in 循环中的 n 代表的是数组集合中的key值（即数组下标），它遍历属性。</p>
+<pre><code>var arr = [1, 2, 3, 4, 5];
+// 自定义一个数组属性
+arr.desc = &quot;five number&quot;;
+for (var n in arr) { 
+    console.log(arr[n]);
+}
+</code></pre><h4 id="for-of"><a href="#for-of" class="headerlink" title="for of"></a>for of</h4><p>&#8195;&#8195;for of 循环 中的 i 直接就是value值，允许breakbreak，但是不读取属性值。</p>
+<pre><code>var arr = [1, 2, 3, 4, 5];
+// 自定义一个数组属性
+arr.desc = &quot;five number&quot;;
+for (var i of arr) { 
+    if (i &gt; 3) { 
+        break;
+    }
+    console.log(i);
+}
+</code></pre>
+      
+    </div>
+    
+    
+    
+	
+	<div>
+	  
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:16px;">-------------END-------------</div>
+    
+</div>
+	  
+	</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/FovNartuo.github.io/tags/TypeScript/" rel="tag"># TypeScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/FovNartuo.github.io/2019/01/20/JavaScript学习记录-函数/" rel="next" title="JavaScript学习记录-函数">
+                <i class="fa fa-chevron-left"></i> JavaScript学习记录-函数
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            OverView
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">bertZuo</p>
+              <p class="site-description motion-element" itemprop="description">The harder you work, the more progress you make.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/FovNartuo.github.io/archives/">
+              
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/FovNartuo" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="384699526@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                my blog
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.csdn.net/bertZuo" title="CSDN" target="_blank">CSDN</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://gitee.com/bertZuo" title="Gitee" target="_blank">Gitee</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串新特性"><span class="nav-number">1.</span> <span class="nav-text">字符串新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多行字符串"><span class="nav-number">1.1.</span> <span class="nav-text">多行字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串模板"><span class="nav-number">1.2.</span> <span class="nav-text">字符串模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动拆分字符串"><span class="nav-number">1.3.</span> <span class="nav-text">自动拆分字符串</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数新特性"><span class="nav-number">2.</span> <span class="nav-text">参数新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参数类型"><span class="nav-number">2.1.</span> <span class="nav-text">参数类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数默认值"><span class="nav-number">2.2.</span> <span class="nav-text">参数默认值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可选参数"><span class="nav-number">2.3.</span> <span class="nav-text">可选参数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数新特性"><span class="nav-number">3.</span> <span class="nav-text">函数新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Rest-and-Spread-操作符"><span class="nav-number">3.1.</span> <span class="nav-text">Rest and Spread 操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#generator-函数"><span class="nav-number">3.2.</span> <span class="nav-text">generator 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#destructuring析构表达式"><span class="nav-number">3.3.</span> <span class="nav-text">destructuring析构表达式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#箭头表达式"><span class="nav-number">4.</span> <span class="nav-text">箭头表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#箭头表达式写法"><span class="nav-number">4.1.</span> <span class="nav-text">箭头表达式写法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见的应用"><span class="nav-number">4.2.</span> <span class="nav-text">常见的应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#箭头函数的优势"><span class="nav-number">4.3.</span> <span class="nav-text">箭头函数的优势</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环语法新特性"><span class="nav-number">5.</span> <span class="nav-text">循环语法新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#forEach"><span class="nav-number">5.1.</span> <span class="nav-text">forEach</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for-in"><span class="nav-number">5.2.</span> <span class="nav-text">for in</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for-of"><span class="nav-number">5.3.</span> <span class="nav-text">for of</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">bertZuo</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/FovNartuo.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/FovNartuo.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/FovNartuo.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/FovNartuo.github.io/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/FovNartuo.github.io/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/FovNartuo.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/FovNartuo.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/FovNartuo.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
